@@ -49,11 +49,7 @@ const Navbar = () => {
   return (
     <header className="relative">
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-black/80 backdrop-blur-md py-4"
-            : "bg-transparent py-6"
-        }`}
+        className="fixed w-full z-50 transition-all duration-300"
         role="navigation"
         aria-label="Hauptnavigation"
       >
