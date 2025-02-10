@@ -1,32 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const throttle = (func, limit) => {
-    let inThrottle;
-    return function (...args) {
-      if (!inThrottle) {
-        func.apply(this, args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
-      }
-    };
-  };
-
-  const handleScroll = useCallback(
-    throttle(() => {
-      setIsScrolled(window.scrollY > 50);
-    }, 100),
-    []
-  );
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
 
   // Mobile menü açıldığında scroll'u engelleyelim
   useEffect(() => {
@@ -49,7 +25,7 @@ const Navbar = () => {
   return (
     <header className="relative">
       <nav
-        className="fixed w-full z-50 transition-all duration-300"
+        className="absolute top-2 w-full z-50"
         role="navigation"
         aria-label="Hauptnavigation"
       >

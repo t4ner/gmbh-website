@@ -59,14 +59,10 @@ const CompanyInfo = () => {
       aria-label="Unternehmensinfo"
     >
       {/* Header */}
-      <header className="text-center mb-16" data-aos="fade-down">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">
+      <header className="text-center" data-aos="fade-down">
+        <h1 className="text-4xl font-bold mb-15 text-gray-900">
           G&G Fugentechnik GmbH
         </h1>
-        <div
-          className="w-32 h-2 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] mx-auto"
-          role="presentation"
-        ></div>
       </header>
 
       {/* Main Content Grid */}
