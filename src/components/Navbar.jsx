@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <header className="relative">
       <nav
-        className="absolute top-2 w-full z-50"
+        className="absolute top-4 w-full z-50"
         role="navigation"
         aria-label="Hauptnavigation"
       >
@@ -40,9 +40,9 @@ const Navbar = () => {
               <img
                 src="/logo/logo.png"
                 alt="Unternehmenslogo"
-                className="h-28 w-auto object-contain"
-                width="112"
-                height="112"
+                className="h-20 w-auto object-contain"
+                width="80"
+                height="80"
                 loading="eager"
                 fetchPriority="high"
               />

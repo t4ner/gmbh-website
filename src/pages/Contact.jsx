@@ -182,7 +182,7 @@ const Contact = () => {
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="flex flex-col lg:flex-row border border-[#008FC7] shadow-3xl rounded-xl overflow-hidden bg-white transition-transform  duration-300 ease-in-out"
+              className="flex flex-col lg:flex-row border border-[#02C5DF] shadow-3xl rounded-xl overflow-hidden bg-white transition-transform  duration-300 ease-in-out"
             >
               <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto">
                 <iframe
@@ -194,7 +194,7 @@ const Contact = () => {
                 ></iframe>
               </div>
               <div className="w-full p-6 lg:w-1/2 md:p-8">
-                <h2 className="text-xl md:text-3xl font-medium text-[#008FC7] mb-6 md:mb-8">
+                <h2 className="text-xl md:text-3xl font-medium bg-gradient-to-r from-[#02C5DF] to-[#008FC7] text-transparent bg-clip-text mb-6 md:mb-8">
                   Kontaktieren Sie uns!
                 </h2>
                 <form ref={form} onSubmit={sendEmail} className="space-y-4">
@@ -230,7 +230,7 @@ const Contact = () => {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="px-4 py-2 md:px-6 md:py-3 bg-[#008FC7] text-xs md:text-base text-white rounded-md font-medium hover:bg-[#0076AB] transition-all duration-300 transform "
+                      className="px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-[#02C5DF] to-[#008FC7]  text-xs md:text-base text-white rounded-md font-medium hover:bg-[#0076AB] transition-all duration-300 transform "
                     >
                       Schicken
                     </button>

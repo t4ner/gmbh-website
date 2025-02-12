@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const [hasHovered, setHasHovered] = useState(false);
@@ -13,42 +14,42 @@ const Services = () => {
       description:
         "Wir führen Fugenarbeiten gemäß ZTV Fug-StB fachgerecht und präzise aus. Dank unserer sorgfältigen Arbeitsweise gewährleisten wir eine langlebige Abdichtung, die zuverlässig vor Feuchtigkeit, Temperaturschwankungen und daraus resultierenden Schäden schützt",
       img: "/services/service1.webp",
-      },
+    },
     {
       id: 2,
       title: "Trennschnitte in Beton und Asphalt",
       description:
         "Wir führen präzise Trennschnitte in Beton und Asphalt aus. Unsere fachgerechte Arbeitsweise sorgt für saubere Schnittkanten und minimiert Spannungsrisse, um die Langlebigkeit und Stabilität der Bauwerke zu gewährleisten",
       img: "/services/service2.jpg",
-      },
+    },
     {
       id: 3,
       title: "Verarbeitung von 1- und 2-K Fugendichtstoffen",
       description:
         "Wir verarbeiten hochwertige 1- und 2-komponentige Fugendichtstoffe fachgerecht und präzise. Unsere professionelle Anwendung sorgt für eine dauerhafte, elastische Abdichtung, die optimalen Schutz vor Feuchtigkeit, Temperaturschwankungen und mechanischer Belastung bietet",
       img: "/services/service3.jpg",
-      },
+    },
     {
       id: 4,
       title: "Rissesanierung im HPS-Verfahren",
       description:
         "Wir führen Rissesanierungen im HPS-Verfahren fachgerecht und effizient durch. Diese Methode sorgt für eine nachhaltige Versiegelung von Rissen, verhindert das Eindringen von Feuchtigkeit und trägt zur langfristigen Erhaltung der Bausubstanz bei.",
       img: "/services/service4.jpg",
-      },
+    },
     {
       id: 5,
       title: "Heißnaht- und Randabdichtung",
       description:
         "Wir bieten professionelle Heißnaht- und Randabdichtungen an. Diese Verfahren sorgen für eine sichere, langlebige Versiegelung, schützen vor Feuchtigkeitseintritt und erhöhen die Widerstandsfähigkeit von Bauwerken gegen Witterungseinflüsse und mechanische Belastungen.",
       img: "/services/service5.jpeg",
-      },
+    },
     {
       id: 6,
       title: "Schienenfugen- und Pflasterverguss",
       description:
         "Wir führen Schienenfugen- und Pflasterverguss fachgerecht und präzise aus. Diese Verfahren gewährleisten eine dauerhafte Abdichtung, schützen vor Feuchtigkeit und verhindern Schäden durch Temperaturschwankungen sowie mechanische Belastungen",
       img: "/services/service6.jpg",
-      },
+    },
     {
       id: 7,
       title: "Verlegung von Induktionsschleifen",
@@ -75,11 +76,19 @@ const Services = () => {
 
       <div className="space-y-8">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
-            data-aos="fade-up"
-            data-aos-delay={index * 100}
-            className="service-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.5,
+                delay: index * 0.1,
+              },
+            }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="service-card relative"
           >
             <Link
               to="/leistungen"
@@ -87,10 +96,10 @@ const Services = () => {
               state={{ selectedService: service.id }}
             >
               <div
-                className={`group relative rounded-xl overflow-visible transition-all duration-300 border h-[200px] ${
+                className={`group relative rounded-xl overflow-visible transition-all duration-300 h-[200px] ${
                   (!hasHovered && index === 0) || hoveredIndex === index
-                    ? "bg-[#008FC7]"
-                    : ""
+                    ? "bg-gradient-to-r from-[#02C5DF] to-[#008FC7]"
+                    : "bg-[#D6EFF6]"
                 } hover:cursor-pointer`}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -121,8 +130,8 @@ const Services = () => {
                     <div
                       className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
                         (!hasHovered && index === 0) || hoveredIndex === index
-                          ? "border-white bg-[##02C5DF]"
-                          : "border-black"
+                          ? "border-white bg-[#D6EFF6]"
+                          : "border-white bg-gradient-to-r from-[#02C5DF] to-[#008FC7]"
                       }`}
                     >
                       <HiArrowUpRight
@@ -130,7 +139,7 @@ const Services = () => {
                         color={
                           (!hasHovered && index === 0) || hoveredIndex === index
                             ? "black"
-                            : "currentColor"
+                            : "white"
                         }
                       />
                     </div>
@@ -138,11 +147,12 @@ const Services = () => {
                 </div>
 
                 <div
-                  className={`absolute right-[200px] top-1/2 -translate-y-1/2 w-[350px] h-[250px] rotate-12 overflow-hidden rounded-2xl transition-opacity duration-300 ${
+                  className={`absolute right-[200px] top-1/2 -translate-y-1/2 w-[350px] h-[250px] rotate-12 overflow-hidden rounded-2xl border-8 border-white transition-opacity duration-300 ${
                     (!hasHovered && index === 0) || hoveredIndex === index
                       ? "opacity-100"
                       : "opacity-0"
                   }`}
+                  style={{ zIndex: 20 }}
                 >
                   <img
                     src={service.img}
@@ -152,17 +162,17 @@ const Services = () => {
                 </div>
               </div>
             </Link>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       <div className="mt-16 flex justify-center">
         <Link
           to="/leistungen"
-          className="group flex items-center gap-2 px-8 py-4 text-black border rounded-full text-lg hover:bg-[#008FC7] hover:text-white transition-all duration-300"
+          className="group flex items-center gap-2 px-8 py-4 text-black border rounded-full text-lg hover:bg-gradient-to-r from-[#02C5DF] to-[#008FC7] hover:text-white transition-all duration-300"
         >
           Einzelheiten
-          <div className="w-8 h-8 rounded-full bg-[#02C5DF] flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full bg-[#D6EFF6] flex items-center justify-center">
             <HiArrowUpRight className="w-4 h-4" color="black" />
           </div>
         </Link>

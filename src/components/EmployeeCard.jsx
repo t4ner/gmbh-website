@@ -4,6 +4,13 @@ import { BsPhone } from "react-icons/bs";
 
 const employeeData = [
   {
+    name: "Mehmet Gök",
+    position: "Geschäftsführung",
+    phone: "+49 (0)7253 9583-791",
+    mobile: "+49 (0)172 9264 414",
+    email: "mehmet.goek@turom-gmbh.de",
+  },
+  {
     name: "Tanju Gök",
     position: "Kaufmännische Leitung",
     phone: "+49 (0)7253 5091 339",
@@ -21,11 +28,11 @@ const employeeData = [
 
 const EmployeeCard = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-4 pb-24">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 container px-7 mx-auto p-4 pb-24">
       {employeeData.map((employee, index) => (
         <div
           key={index}
-          className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+          className="bg-[#D6EFF6] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
         >
           <div className="text-center mb-6">
             <h3 className="text-xl font-semibold text-gray-800 mb-2">

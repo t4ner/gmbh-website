@@ -45,6 +45,30 @@ const CONTACT_ITEMS = [
 
 const FOOTER_LINKS = [
   {
+    id: "startseite",
+    to: "/",
+    text: "Startseite",
+    ariaLabel: "Go to homepage",
+  },
+  {
+    id: "services",
+    to: "/leistungen",
+    text: "Leistungen",
+    ariaLabel: "Go to services page",
+  },
+  {
+    id: "about",
+    to: "/uber-uns",
+    text: "Über uns",
+    ariaLabel: "Go to about us page",
+  },
+  {
+    id: "contact",
+    to: "/kontakt",
+    text: "Kontakt",
+    ariaLabel: "Go to contact page",
+  },
+  {
     id: "impressum",
     to: "/impressum",
     text: "Impressum",
@@ -141,16 +165,16 @@ const BottomSection = memo(() => {
           <img
             src={Logo}
             alt={`${COMPANY_INFO.name} Logo`}
-            className="w-14 md:w-32 hover:opacity-80 transition-opacity duration-300"
-            width="128"
-            height="40"
+            className="w-40 hover:opacity-80 transition-opacity duration-300"
+            width="160"
+            height="160"
             loading="lazy"
           />
         </Link>
       </div>
 
       <nav
-        className="flex flex-col mt-5 md:mt-0 text-[#06234B]/60 text-sm md:text-base sm:flex-row items-center gap-4 sm:gap-8 md:gap-12 mb-6 md:mb-8"
+        className="flex flex-col mt-5 md:mt-0 text-[#06234B]/60 text-sm md:text-base sm:flex-row items-center gap-2 sm:gap-4 md:gap-6 mb-6 md:mb-8"
         aria-label="Footer navigation"
       >
         {footerLinks}

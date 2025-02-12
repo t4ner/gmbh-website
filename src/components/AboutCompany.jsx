@@ -34,7 +34,7 @@ const AboutCompany = () => {
           </p>
         </div>
 
-        <div className="bg-white p-12 rounded-xl shadow-lg mb-20 border border-gray-100">
+        <div className="bg-[#D6EFF6] p-12 rounded-xl shadow-lg mb-20 border border-gray-100">
           <h3 className="text-xl font-semibold mb-8 text-gray-900">
             Unsere Geschichte
           </h3>

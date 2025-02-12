@@ -169,7 +169,7 @@ const CompanyInfo = () => {
               data-aos-delay={index * 100}
             >
               <div
-                className="text-[#008FC8] mb-6 bg-blue-50 w-16 h-16 rounded-2xl 
+                className="text-[#008FC7] mb-6 bg-[#D6EFF6] w-16 h-16 rounded-2xl 
                 flex items-center justify-center transform transition-all duration-500 
                  group-hover:scale-110 group-hover:bg-blue-100/80"
                 aria-hidden="true"

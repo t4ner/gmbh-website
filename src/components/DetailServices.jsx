@@ -122,7 +122,11 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
                   : "md:flex-row rounded-r-[3rem] mr-auto"
               } overflow-hidden w-[1500px] h-[500px] hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transform hover:-translate-y-3 transition-all duration-700 ease-out group-hover/item:translate-y-0`}
             >
-              <div className="w-full md:w-2/3 relative h-[600px] overflow-hidden">
+              <div
+                className={`w-full md:w-2/3 relative h-[600px] overflow-hidden ${
+                  service.align === "right" ? "border-l-8" : "border-r-8"
+                } border-white`}
+              >
                 <img
                   src={service.image}
                   alt={service.imageAlt}
