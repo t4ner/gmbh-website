@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ServicesPage from "./pages/ServicesPage";
 import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
-
+import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <div>
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/leistungen" element={<ServicesPage />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
