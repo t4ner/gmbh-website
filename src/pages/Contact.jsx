@@ -37,9 +37,9 @@ const Contact = () => {
     message: "",
   });
   const heroContent = {
-    title: "Über\nUns",
-    subtitle: "Erfahrung und Kompetenz seit Jahren",
-    backgroundImage: "/hero/about-hero.jpg",
+    title: "Kontakt zur \nG&G Fugentechnik GmbH",
+    subtitle: "Fragen zu unseren Leistungen? Kontaktieren Sie uns!",
+    backgroundImage: "/hero/contact-hero.jpg",
     imageAlt: "G&G Fugentechnik Team und Unternehmen",
   };
 
@@ -49,34 +49,55 @@ const Contact = () => {
       <Hero {...heroContent} />
 
       {/* Stats/Contact Info Section */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-40 relative z-10">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8 -mt-40 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
           {[
             {
-              icon: <FaPhone className="w-6 h-6" />,
-              title: "Telefon",
-              value: "+90 123 456 7890",
+              icon: <FaMapMarkerAlt className="w-6 h-6" />,
+              title: "Adresse",
+              value: (
+                <>
+                  G&G Fugentechnik GmbH
+                  <br />
+                  Südendstraße 7/1,
+                  <br />
+                  76709 Kronau
+                </>
+              ),
+              link: "https://maps.app.goo.gl/GsX4i2fXnqiB54ys5",
               color: "from-[#7BE4F0] to-[#02C5DF]",
               hoverColor: "hover:from-[#6ad3de] hover:to-[#02b3cc]",
             },
             {
-              icon: <FaEnvelope className="w-6 h-6" />,
-              title: "E-posta",
-              value: "info@sirketiniz.com",
+              icon: <FaPhone className="w-6 h-6" />,
+              title: "Telefon",
+              value: "+49 (0)7253 5091 340",
+              link: "tel:+4972535091340",
               color: "from-[#02C5DF] to-[#02A7C7]",
               hoverColor: "hover:from-[#02b3cc] hover:to-[#0295b2]",
             },
             {
-              icon: <FaMapMarkerAlt className="w-6 h-6" />,
-              title: "Adres",
-              value: "İstanbul, Türkiye",
+              icon: <FaEnvelope className="w-6 h-6" />,
+              title: "E-Mail",
+              value: "info@gundg-fugentechnik.de",
+              link: "mailto:info@gundg-fugentechnik.de",
               color: "from-[#02A7C7] to-[#008FC7]",
               hoverColor: "hover:from-[#0295b2] hover:to-[#007eb3]",
             },
             {
               icon: <FaClock className="w-6 h-6" />,
-              title: "Çalışma Saatleri",
-              value: "Pzt-Cuma 09:00-18:00",
+              title: "Bürozeiten",
+              value: (
+                <>
+                  Montag bis Freitag: 8:00 - 16:30 Uhr
+                  <br />
+                  Samstag, Sonntag und an Feiertagen: geschlossen
+                  <br />
+                  <span className="text-sm italic">
+                    Oder nach vorheriger Terminvereinbarung
+                  </span>
+                </>
+              ),
               color: "from-[#008FC7] to-[#0076AB]",
               hoverColor: "hover:from-[#007eb3] hover:to-[#006796]",
             },
@@ -88,26 +109,66 @@ const Contact = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl h-[300px] flex flex-col">
-                <div
-                  className={`bg-gradient-to-r ${item.color} ${item.hoverColor} p-8 text-white transition-all duration-300 flex-1 flex flex-col justify-between`}
+              {item.link ? (
+                <a
+                  href={item.link}
+                  target={item.link.startsWith("http") ? "_blank" : "_self"}
+                  rel={
+                    item.link.startsWith("http") ? "noopener noreferrer" : ""
+                  }
+                  className="block cursor-pointer"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
-                      {React.cloneElement(item.icon, { className: "w-8 h-8" })}
+                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl h-[380px] flex flex-col">
+                    <div
+                      className={`bg-gradient-to-r ${item.color} ${item.hoverColor} p-8 text-white transition-all duration-300 flex-1 flex flex-col justify-between`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm  transition-transform duration-300">
+                          {React.cloneElement(item.icon, {
+                            className: "w-8 h-8",
+                          })}
+                        </div>
+                        <span className="text-4xl font-bold opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                      <div className="mt-auto">
+                        <h3 className="text-2xl font-semibold mb-4">
+                          {item.title}
+                        </h3>
+                        <p className="text-lg opacity-90 leading-relaxed">
+                          {item.value}
+                        </p>
+                      </div>
                     </div>
-                    <span className="text-5xl font-bold opacity-50 group-hover:opacity-100 transition-opacity duration-300">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
                   </div>
-                  <div className="mt-auto">
-                    <h3 className="text-2xl font-semibold mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-lg opacity-90">{item.value}</p>
+                </a>
+              ) : (
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300  hover:shadow-2xl h-[380px] flex flex-col">
+                  <div
+                    className={`bg-gradient-to-r ${item.color} ${item.hoverColor} p-8 text-white transition-all duration-300 flex-1 flex flex-col justify-between`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm  transition-transform duration-300">
+                        {React.cloneElement(item.icon, {
+                          className: "w-8 h-8",
+                        })}
+                      </div>
+                      <span className="text-4xl font-bold opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <div className="mt-auto">
+                      <h3 className="text-2xl font-semibold mb-4">
+                        {item.title}
+                      </h3>
+                      <p className="text-lg opacity-90 leading-relaxed">
+                        {item.value}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -118,13 +179,16 @@ const Contact = () => {
         <ToastContainer />
         <div className="px-4 py-8 mb-20 md:px-6 lg:px-8">
           <div className="mx-auto">
-            <div className="flex flex-col lg:flex-row border border-[#008FC7] shadow-3xl rounded-xl overflow-hidden bg-white transition-transform hover:scale-[1.02] duration-300 ease-in-out">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="flex flex-col lg:flex-row border border-[#008FC7] shadow-3xl rounded-xl overflow-hidden bg-white transition-transform  duration-300 ease-in-out"
+            >
               <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2592.5869033873782!2d8.52957887702854!3d49.47341967142224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797cf2409cdd84f%3A0x9c05d769c7c35c69!2sHans-Thoma-Stra%C3%9Fe%2034%2C%2068163%20Mannheim%2C%20Germany!5e0!3m2!1sen!2str!4v1736519475822!5m2!1sen!2str"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.479675928826!2d8.626844499999999!3d49.2104295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797bd87b327fc9b%3A0x88814e4334e9b77c!2sG%C3%B6k%20%26%20G%C3%BCney%20Fugentechnik%20GmbH!5e0!3m2!1sen!2str!4v1738857777383!5m2!1sen!2str"
                   className="w-full h-full"
                   style={{ border: 0 }}
-                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
@@ -166,7 +230,7 @@ const Contact = () => {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="px-4 py-2 md:px-6 md:py-3 bg-[#008FC7] text-xs md:text-base text-white rounded-md font-medium hover:bg-[#0076AB] transition-all duration-300 transform hover:scale-105"
+                      className="px-4 py-2 md:px-6 md:py-3 bg-[#008FC7] text-xs md:text-base text-white rounded-md font-medium hover:bg-[#0076AB] transition-all duration-300 transform "
                     >
                       Schicken
                     </button>

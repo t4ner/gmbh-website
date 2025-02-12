@@ -13,24 +13,23 @@ const ServicesPage = () => {
   };
 
   const statisticsContent = {
-    title: "Our Service Excellence in Numbers",
-    description:
-      "Delivering outstanding results through innovative solutions and dedicated service",
+    title: "Unsere Leistungen in Zahlen",
+    description: "Qualität und Erfahrung in der professionellen Fugentechnik",
     stats: [
       {
-        value: "24/7",
-        title: "Support Available",
-        description: "Round-the-clock technical assistance",
+        value: "10+",
+        title: "Jahre Erfahrung",
+        description: "Expertise in der Branche",
       },
       {
-        value: "15+",
-        title: "Service Types",
-        description: "Comprehensive service portfolio",
+        value: "100+",
+        title: "Abgeschlossene Projekte",
+        description: "Erfolgreiche Fugenarbeiten",
       },
       {
-        value: "99%",
-        title: "Success Rate",
-        description: "Consistently exceeding expectations",
+        value: "100%",
+        title: "Kundenzufriedenheit",
+        description: "Höchste Qualitätsstandards",
       },
     ],
   };
@@ -39,7 +38,9 @@ const ServicesPage = () => {
     <>
       <Navbar />
       <Hero {...heroContent} />
+      <div data-aos="fade-up" data-aos-delay="100">
       <Statistics {...statisticsContent} />
+      </div>
       <DetailServices />
     </>
   );

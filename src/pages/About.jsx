@@ -4,33 +4,34 @@ import Statistics from "../components/Statistics";
 import Navbar from "../components/Navbar";
 import AboutCompany from "../components/AboutCompany";
 import EmployeeCard from "../components/EmployeeCard";
+
 const About = () => {
   const heroContent = {
-    title: "Über\nUns",
+    title: "Über die \nG&G Fugentechnik GmbH",
     subtitle: "Erfahrung und Kompetenz seit Jahren",
-    backgroundImage: "/hero/about-hero.jpg",
+    backgroundImage: "/hero/uber-uns-hero.jpg",
     imageAlt: "G&G Fugentechnik Team und Unternehmen",
   };
 
   const statisticsContent = {
-    title: "Your Trusted Partner in Industrial Growth",
+    title: "G&G Fugentechnik GmbH - Ihre Vorteile",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "Technische Exzellenz, Wirtschaftlichkeit und Zuverlässigkeit für Ihren Wettbewerbsvorteil",
     stats: [
       {
-        value: "300+",
-        title: "Completed Projects",
-        description: "Successfully delivered projects across industries",
+        value: "100%",
+        title: "Technische Exzellenz",
+        description: "Modernste Technologie und Fachkompetenz",
       },
       {
-        value: "90+",
-        title: "Expert Team",
-        description: "Skilled professionals at your service",
+        value: "24/7",
+        title: "Zuverlässigkeit",
+        description: "Termintreue und flexible Einsatzbereitschaft",
       },
       {
-        value: "12K",
-        title: "Happy Clients",
-        description: "Satisfied customers worldwide",
+        value: "Top",
+        title: "Preis-Leistung",
+        description: "Optimales Kosten-Nutzen-Verhältnis",
       },
     ],
   };
@@ -38,10 +39,17 @@ const About = () => {
   return (
     <>
       <Navbar />
+
       <Hero {...heroContent} />
-      <Statistics {...statisticsContent} />
-      <AboutCompany />
-      <EmployeeCard />
+      <div data-aos="fade-up" data-aos-delay="100">
+        <Statistics {...statisticsContent} />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <AboutCompany />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <EmployeeCard />
+      </div>
     </>
   );
 };

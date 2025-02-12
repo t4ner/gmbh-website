@@ -53,7 +53,7 @@ const Statistics = ({ title, description, stats }) => {
       <div className="relative container mx-auto px-4 py-24">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-24">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r pb-2 from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
             {title}
           </h2>
           <p className="text-gray-600 text-lg">{description}</p>

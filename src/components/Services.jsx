@@ -40,13 +40,15 @@ const Services = () => {
       title: "Heißnaht- und Randabdichtung",
       description:
         "Wir bieten professionelle Heißnaht- und Randabdichtungen an. Diese Verfahren sorgen für eine sichere, langlebige Versiegelung, schützen vor Feuchtigkeitseintritt und erhöhen die Widerstandsfähigkeit von Bauwerken gegen Witterungseinflüsse und mechanische Belastungen.",
-    },
+      img: "/services/service5.jpeg",
+      },
     {
       id: 6,
       title: "Schienenfugen- und Pflasterverguss",
       description:
         "Wir führen Schienenfugen- und Pflasterverguss fachgerecht und präzise aus. Diese Verfahren gewährleisten eine dauerhafte Abdichtung, schützen vor Feuchtigkeit und verhindern Schäden durch Temperaturschwankungen sowie mechanische Belastungen",
-    },
+      img: "/services/service6.jpg",
+      },
     {
       id: 7,
       title: "Verlegung von Induktionsschleifen",
