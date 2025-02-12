@@ -60,7 +60,7 @@ const CompanyInfo = () => {
     >
       {/* Header */}
       <header className="text-center" data-aos="fade-down">
-        <h1 className="text-4xl font-bold mb-15 text-gray-900">
+        <h1 className="text-5xl pb-10 font-bold mb-6 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
           G&G Fugentechnik GmbH
         </h1>
       </header>
@@ -69,9 +69,9 @@ const CompanyInfo = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         {/* Left Side - Main Image */}
         <div className="md:col-span-7" data-aos="fade-right">
-          <figure className="relative rounded-3xl overflow-hidden h-[600px] bg-white shadow-xl transform transition-transform hover:scale-[1.02] duration-300">
+          <figure className="relative rounded-3xl overflow-hidden h-[650px] bg-white shadow-xl transform transition-transform hover:scale-[1.02] duration-300">
             <img
-              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=1200"
+              src="/information/info1.webp"
               alt="G&G Fugentechnik Firmengebäude und Arbeitsumgebung"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -85,68 +85,73 @@ const CompanyInfo = () => {
         </div>
 
         {/* Right Side Content */}
-        <div className="md:col-span-5 space-y-6" data-aos="fade-left">
-          {/* Profile Card */}
-          <div className="flex flex-col md:flex-row items-start gap-6">
-            <figure className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0 shadow-xl border-4 border-white">
-              <img
-                src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=256&q=80"
-                alt="G&G Fugentechnik Recycling Prozess"
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-            <article className="bg-white rounded-3xl p-6 flex-grow shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <h2 className="text-xl font-semibold mb-3 text-gray-800">
-                Wer sind wir?
-              </h2>
-              <p className="text-gray-600 leading-relaxed">
-                Ihr Spezialist für professionelle Fugentechnik und innovative
-                Straßenbaulösungen
-              </p>
-            </article>
-          </div>
-
-          {/* Image Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              {
-                src: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80",
-                alt: "Professionelle Werkzeuge für Fugentechnik",
-              },
-              {
-                src: "https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=600&q=80",
-                alt: "Nachhaltige Baupraktiken bei G&G Fugentechnik",
-              },
-            ].map((img, index) => (
-              <figure
-                key={index}
-                className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-48 transform hover:scale-[1.02]"
-              >
+        <div
+          className="md:col-span-5 flex flex-col h-full"
+          data-aos="fade-left"
+        >
+          <div className="space-y-6 h-full flex flex-col">
+            {/* Profile Card */}
+            <div className="flex flex-col md:flex-row items-start gap-6">
+              <figure className="w-32 h-32 rounded-full overflow-hidden p-6 flex-shrink-0 shadow-xl border border-white">
                 <img
-                  src={img.src}
-                  alt={img.alt}
+                  src="logo/logo2.png"
+                  alt="G&G Fugentechnik Recycling Prozess"
                   className="w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"
                 />
               </figure>
-            ))}
-          </div>
+              <article className="bg-white rounded-3xl p-6 flex-grow shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <h2 className="text-xl font-semibold mb-3 text-gray-800">
+                  Wer sind wir?
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Ihr Spezialist für professionelle Fugentechnik und innovative
+                  Straßenbaulösungen
+                </p>
+              </article>
+            </div>
 
-          {/* Quality Box */}
-          <article className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">
-              Qualität als oberste Priorität
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Die Qualität unserer Dienstleistungen hat für uns höchste
-              Bedeutung. Durch konsequente Qualitätssicherung stellen wir
-              sicher, dass unsere Arbeit nicht nur den höchsten Ansprüchen
-              genügt, sondern auch Ihre Erwartungen übertrifft.
-            </p>
-          </article>
+            {/* Image Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                {
+                  src: "/information/info3.jpg",
+                  alt: "Professionelle Werkzeuge für Fugentechnik",
+                },
+                {
+                  src: "/information/info2.jpg",
+                  alt: "Nachhaltige Baupraktiken bei G&G Fugentechnik",
+                },
+              ].map((img, index) => (
+                <figure
+                  key={index}
+                  className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 h-48 transform hover:scale-[1.02]"
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              ))}
+            </div>
+
+            {/* Quality Box */}
+            <article className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex-grow">
+              <h2 className="text-xl font-semibold mb-4 text-gray-800">
+                Qualität als oberste Priorität
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Die Qualität unserer Dienstleistungen hat für uns höchste
+                Bedeutung. Durch konsequente Qualitätssicherung stellen wir
+                sicher, dass unsere Arbeit nicht nur den höchsten Ansprüchen
+                genügt, sondern auch Ihre Erwartungen übertrifft.
+              </p>
+            </article>
+          </div>
         </div>
       </div>
 
@@ -178,7 +183,7 @@ const CompanyInfo = () => {
                 {service.title}
               </h3>
               <p
-                className="text-gray-600 leading-relaxed transition-all 
+                className="text-gray-600 text-lg leading-relaxed transition-all 
                 duration-500 ease-in-out group-hover:text-gray-700"
               >
                 {service.description}

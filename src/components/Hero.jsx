@@ -3,7 +3,12 @@ import Navbar from "./Navbar";
 // Resmi import etmek yerine public klasöründen kullanacağız
 // import herohome from "/hero/home-hero.jpg";
 
-const Hero = () => {
+const Hero = ({
+  title,
+  subtitle,
+  backgroundImage = "/hero/home-hero.jpg",
+  imageAlt,
+}) => {
   // useCallback ile scroll handler'ı optimize ediyoruz
   const handleScroll = useCallback(() => {
     const scrolled = window.scrollY;
@@ -34,12 +39,12 @@ const Hero = () => {
       <div className="absolute inset-0 h-screen w-screen z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent z-10" />
         <img
-          src="/hero/home-hero.jpg"
-          alt="G&G Fugentechnik GmbH Firmengebäude und Dienstleistungen"
+          src={backgroundImage}
+          alt={imageAlt}
           className="w-full h-full object-cover scale-105 parallax"
           data-speed="0.2"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
           width="1920"
           height="1080"
           decoding="async"
@@ -63,16 +68,23 @@ const Hero = () => {
         <div className="max-w-4xl">
           <h1
             className="text-6xl font-bold text-white mb-6 leading-tight animate-fade-in"
-            aria-label="Willkommen bei G&G Fugentechnik GmbH"
+            aria-label={title}
           >
-            Willkommen bei
-            <br />
-            <span className="bg-gradient-to-r from-[#02C5DF] to-[#008FC7] text-transparent bg-clip-text">
-              G&G Fugentechnik GmbH
-            </span>
+            {title.split("\n").map((line, i) => (
+              <React.Fragment key={i}>
+                {i > 0 && <br />}
+                {i === title.split("\n").length - 1 ? (
+                  <span className="bg-gradient-to-r from-[#02C5DF] to-[#008FC7] text-transparent bg-clip-text">
+                    {line}
+                  </span>
+                ) : (
+                  line
+                )}
+              </React.Fragment>
+            ))}
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 animate-slide-up">
-            Ihr Partner für Fugen-, Trennschnitt- und Rissesanierungstechnik
+            {subtitle}
           </p>
         </div>
       </div>

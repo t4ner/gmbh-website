@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import homeHero from "/hero/home-hero.jpg";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
@@ -13,25 +12,29 @@ const Services = () => {
       title: "Fugenherstellung nach ZTV Fug-StB",
       description:
         "Wir führen Fugenarbeiten gemäß ZTV Fug-StB fachgerecht und präzise aus. Dank unserer sorgfältigen Arbeitsweise gewährleisten wir eine langlebige Abdichtung, die zuverlässig vor Feuchtigkeit, Temperaturschwankungen und daraus resultierenden Schäden schützt",
-    },
+      img: "/services/service1.webp",
+      },
     {
       id: 2,
       title: "Trennschnitte in Beton und Asphalt",
       description:
         "Wir führen präzise Trennschnitte in Beton und Asphalt aus. Unsere fachgerechte Arbeitsweise sorgt für saubere Schnittkanten und minimiert Spannungsrisse, um die Langlebigkeit und Stabilität der Bauwerke zu gewährleisten",
-    },
+      img: "/services/service2.jpg",
+      },
     {
       id: 3,
       title: "Verarbeitung von 1- und 2-K Fugendichtstoffen",
       description:
         "Wir verarbeiten hochwertige 1- und 2-komponentige Fugendichtstoffe fachgerecht und präzise. Unsere professionelle Anwendung sorgt für eine dauerhafte, elastische Abdichtung, die optimalen Schutz vor Feuchtigkeit, Temperaturschwankungen und mechanischer Belastung bietet",
-    },
+      img: "/services/service3.jpg",
+      },
     {
       id: 4,
       title: "Rissesanierung im HPS-Verfahren",
       description:
         "Wir führen Rissesanierungen im HPS-Verfahren fachgerecht und effizient durch. Diese Methode sorgt für eine nachhaltige Versiegelung von Rissen, verhindert das Eindringen von Feuchtigkeit und trägt zur langfristigen Erhaltung der Bausubstanz bei.",
-    },
+      img: "/services/service4.jpg",
+      },
     {
       id: 5,
       title: "Heißnaht- und Randabdichtung",
@@ -49,6 +52,7 @@ const Services = () => {
       title: "Verlegung von Induktionsschleifen",
       description:
         "Wir verlegen Induktionsschleifen präzise und fachgerecht. Diese ermöglichen eine zuverlässige Signalübertragung für Verkehrssteuerungssysteme, Schrankenanlagen und Parkleitsysteme und sorgen für eine effiziente und langlebige Funktion",
+      img: "/services/service7.jpg",
     },
   ];
 
@@ -63,7 +67,7 @@ const Services = () => {
 
   return (
     <div className="w-full container mx-auto pb-24">
-      <h1 className="text-4xl font-bold mb-15 text-gray-900 text-center">
+      <h1 className="text-5xl pb-10 font-bold mb-6 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent text-center p-3">
         Unsere Leistungen im Überblick
       </h1>
 
@@ -75,7 +79,11 @@ const Services = () => {
             data-aos-delay={index * 100}
             className="service-card"
           >
-            <Link to="/leistungen" key={service.id}>
+            <Link
+              to="/leistungen"
+              key={service.id}
+              state={{ selectedService: service.id }}
+            >
               <div
                 className={`group relative rounded-xl overflow-visible transition-all duration-300 border h-[200px] ${
                   (!hasHovered && index === 0) || hoveredIndex === index
@@ -97,7 +105,7 @@ const Services = () => {
                       {service.title}
                     </h2>
                     <p
-                      className={` ${
+                      className={`text-lg leading-relaxed ${
                         (!hasHovered && index === 0) || hoveredIndex === index
                           ? "text-white/90"
                           : "text-gray-600"
@@ -135,7 +143,7 @@ const Services = () => {
                   }`}
                 >
                   <img
-                    src={homeHero}
+                    src={service.img}
                     alt={service.title}
                     className="w-full h-full object-cover scale-110"
                   />

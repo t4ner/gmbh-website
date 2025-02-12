@@ -8,68 +8,92 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-// Statik değerler component dışında tanımlanıyor
+// Statik değerler ve meta bilgiler
+const COMPANY_INFO = {
+  name: "Gundg Fugentechnik",
+  phone: "+49 (0)7253 5091 340",
+  email: "info@gundg-fugentechnik.de",
+  location: "https://maps.app.goo.gl/dd2NNC7Wit4ag6248",
+};
+
 const CONTACT_ITEMS = [
   {
     id: "phone",
-    href: "tel:+4972535091340",
+    href: `tel:${COMPANY_INFO.phone.replace(/\s/g, "")}`,
     icon: FaPhone,
-    text: "+49 (0)7253 5091 340",
+    text: COMPANY_INFO.phone,
     target: "_self",
+    ariaLabel: "Contact us by phone",
   },
   {
     id: "email",
-    href: "mailto:info@gundg-fugentechnik.de",
+    href: `mailto:${COMPANY_INFO.email}`,
     icon: FaEnvelope,
-    text: "info@gundg-fugentechnik.de",
+    text: COMPANY_INFO.email,
     target: "_self",
+    ariaLabel: "Contact us by email",
   },
   {
     id: "location",
-    href: "https://maps.app.goo.gl/dd2NNC7Wit4ag6248",
+    href: COMPANY_INFO.location,
     icon: FaMapMarkerAlt,
     text: "Standort finden",
     target: "_blank",
+    ariaLabel: "View our location",
   },
 ];
 
 const FOOTER_LINKS = [
-  { id: "impressum", to: "/impressum", text: "Impressum" },
-  { id: "privacy", to: "/datenschutzerklarung", text: "Datenschutzerklärung" },
+  {
+    id: "impressum",
+    to: "/impressum",
+    text: "Impressum",
+    ariaLabel: "Go to legal information page",
+  },
+  {
+    id: "privacy",
+    to: "/datenschutzerklarung",
+    text: "Datenschutzerklärung",
+    ariaLabel: "Go to privacy policy page",
+  },
 ];
 
-const CURRENT_YEAR = new Date().getFullYear();
-
 // Style sabitleri
-const ICON_WRAPPER_STYLES =
-  "bg-gradient-to-br from-[#008FC8] to-[#006a96] p-2 md:p-4 rounded-2xl text-white text-xl group-hover:scale-110 transition-transform duration-300 shadow-md shadow-[#008FC8]/20";
-const FOOTER_LINK_STYLES =
-  "text-[#06234B]/60 hover:text-[#008FC8] transition-all duration-300 text-sm flex items-center gap-2 group";
-const ARROW_ICON_STYLES =
-  "opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300";
-const CONTACT_BUTTON_STYLES =
-  "flex items-center gap-6 group p-6 rounded-3xl border border-[#008FC8]/10 hover:border-[#008FC8]/20 bg-gradient-to-br from-[#008FC8]/5 to-transparent hover:from-[#008FC8]/10 transition-all duration-500 hover:shadow-lg hover:shadow-[#008FC8]/5";
+const styles = {
+  iconWrapper:
+    "bg-gradient-to-r from-[#02C5DF] to-[#008FC7] p-2 md:p-4 rounded-2xl text-white text-xl group-hover:scale-110 transition-transform duration-300 shadow-md shadow-[#02C5DF]/20",
+  footerLink:
+    "text-[#06234B]/60 hover:text-[#02C5DF] transition-all duration-300 text-sm flex items-center gap-2 group",
+  arrowIcon:
+    "opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300",
+  contactButton:
+    "flex items-center gap-6 group p-6 rounded-3xl border border-[#02C5DF]/10 hover:border-[#02C5DF]/20 bg-gradient-to-r from-[#02C5DF]/5 to-[#008FC7]/5 hover:from-[#02C5DF]/10 hover:to-[#008FC7]/10 transition-all duration-500 hover:shadow-lg hover:shadow-[#02C5DF]/5",
+};
 
 const IconWrapper = memo(({ Icon }) => (
-  <div className={ICON_WRAPPER_STYLES} aria-hidden="true">
+  <div className={styles.iconWrapper} aria-hidden="true">
     <Icon />
   </div>
 ));
 
-const FooterLink = memo(({ to, children }) => (
-  <Link to={to} className={FOOTER_LINK_STYLES} aria-label={`${children}`}>
+IconWrapper.displayName = "IconWrapper";
+
+const FooterLink = memo(({ to, children, ariaLabel }) => (
+  <Link to={to} className={styles.footerLink} aria-label={ariaLabel}>
     <span>{children}</span>
-    <FaArrowRight className={ARROW_ICON_STYLES} aria-hidden="true" />
+    <FaArrowRight className={styles.arrowIcon} aria-hidden="true" />
   </Link>
 ));
 
-const ContactButton = memo(({ href, icon: Icon, text, target }) => (
+FooterLink.displayName = "FooterLink";
+
+const ContactButton = memo(({ href, icon: Icon, text, target, ariaLabel }) => (
   <a
     href={href}
-    className={CONTACT_BUTTON_STYLES}
+    className={styles.contactButton}
     target={target}
     rel={target === "_blank" ? "noopener noreferrer" : undefined}
-    aria-label={`Bize ulaşın: ${text}`}
+    aria-label={ariaLabel}
   >
     <IconWrapper Icon={Icon} />
     <span className="text-[#06234B] text-sm md:text-base font-medium">
@@ -78,24 +102,32 @@ const ContactButton = memo(({ href, icon: Icon, text, target }) => (
   </a>
 ));
 
-const ContactSection = memo(() => (
-  <nav
-    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mb-16 md:mb-24"
-    aria-label="İletişim seçenekleri"
-  >
-    {useMemo(
-      () =>
-        CONTACT_ITEMS.map((item) => <ContactButton key={item.id} {...item} />),
-      []
-    )}
-  </nav>
-));
+ContactButton.displayName = "ContactButton";
+
+const ContactSection = memo(() => {
+  const contactButtons = useMemo(
+    () =>
+      CONTACT_ITEMS.map((item) => <ContactButton key={item.id} {...item} />),
+    []
+  );
+
+  return (
+    <nav
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mb-16 md:mb-24"
+      aria-label="Contact options"
+    >
+      {contactButtons}
+    </nav>
+  );
+});
+
+ContactSection.displayName = "ContactSection";
 
 const BottomSection = memo(() => {
   const footerLinks = useMemo(
     () =>
       FOOTER_LINKS.map((link) => (
-        <FooterLink key={link.id} to={link.to}>
+        <FooterLink key={link.id} to={link.to} ariaLabel={link.ariaLabel}>
           {link.text}
         </FooterLink>
       )),
@@ -105,11 +137,13 @@ const BottomSection = memo(() => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center pt-8 md:pt-12 border-t border-[#06234B]/10">
       <div className="mb-6 md:mb-8">
-        <Link to="/" aria-label="Ana sayfaya git">
+        <Link to="/" aria-label={`Go to ${COMPANY_INFO.name} homepage`}>
           <img
             src={Logo}
-            alt="Macaree Logo"
+            alt={`${COMPANY_INFO.name} Logo`}
             className="w-14 md:w-32 hover:opacity-80 transition-opacity duration-300"
+            width="128"
+            height="40"
             loading="lazy"
           />
         </Link>
@@ -117,7 +151,7 @@ const BottomSection = memo(() => {
 
       <nav
         className="flex flex-col mt-5 md:mt-0 text-[#06234B]/60 text-sm md:text-base sm:flex-row items-center gap-4 sm:gap-8 md:gap-12 mb-6 md:mb-8"
-        aria-label="Footer navigasyon"
+        aria-label="Footer navigation"
       >
         {footerLinks}
       </nav>
@@ -125,19 +159,24 @@ const BottomSection = memo(() => {
   );
 });
 
+BottomSection.displayName = "BottomSection";
+
 const Footer = memo(() => (
   <footer
-    className="relative mt-16 md:mt-5 bg-gradient-to-b from-white to-[#f8fbfe] border-t-2 border-[#008FC8]/30"
+    className="relative mt-16 md:mt-5 bg-gradient-to-b from-white to-[#f8fbfe] border-t-2 border-[#02C5DF]/30"
     role="contentinfo"
+    aria-label={`${COMPANY_INFO.name} footer area`}
   >
     <div className="relative container px-4 mx-auto pt-10 md:pt-24 pb-6 md:pb-12">
       <ContactSection />
       <BottomSection />
     </div>
     <div className="text-[#06234B]/60 text-sm text-center pb-5">
-      © {CURRENT_YEAR} Macaree. Alle Rechte vorbehalten.
+      © {new Date().getFullYear()} {COMPANY_INFO.name}. Alle Rechte vorbehalten.
     </div>
   </footer>
 ));
+
+Footer.displayName = "Footer";
 
 export default Footer;
