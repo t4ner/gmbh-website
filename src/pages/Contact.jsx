@@ -55,9 +55,9 @@ const Contact = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="container pt-12 pb-2 mx-auto md:pb-0 md:pt-24">
+      <div className="container pt-12 pb-20 mx-auto md:pt-24">
         <ToastContainer />
-        <div className="px-4 md:mb-20 md:px-6 lg:px-8">
+        <div className="px-4 md:px-6 lg:px-8">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 50 }}

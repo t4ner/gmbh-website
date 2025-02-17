@@ -29,12 +29,12 @@ const employeeData = [
 
 const EmployeeCard = () => {
   return (
-    <div className="container grid grid-cols-1 gap-8 p-4 px-4 mx-auto md:pb-24 md:grid-cols-3 md:px-7">
+    <div className="container grid grid-cols-1 gap-8 p-4 px-4 pb-20 mx-auto md:grid-cols-3 md:px-7">
       {employeeData.map((employee, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 100 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
           className="bg-[#D6EFF6] rounded-2xl shadow-lg p-4 md:p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
@@ -55,7 +55,9 @@ const EmployeeCard = () => {
               </div>
               <div className="ml-4">
                 <p className="text-xs text-gray-500 md:text-sm ">Telefon</p>
-                <p className="text-sm text-gray-700 md:text-base">{employee.phone}</p>
+                <p className="text-sm text-gray-700 md:text-base">
+                  {employee.phone}
+                </p>
               </div>
             </div>
 
@@ -65,7 +67,9 @@ const EmployeeCard = () => {
               </div>
               <div className="ml-4">
                 <p className="text-xs text-gray-500 md:text-sm ">Mobil</p>
-                <p className="text-sm text-gray-700 md:text-base">{employee.mobile}</p>
+                <p className="text-sm text-gray-700 md:text-base">
+                  {employee.mobile}
+                </p>
               </div>
             </div>
 

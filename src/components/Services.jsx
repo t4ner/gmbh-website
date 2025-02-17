@@ -90,7 +90,7 @@ const Services = () => {
   };
 
   return (
-    <div className="container w-full px-4 mx-auto md:pb-24 md:px-6">
+    <div className="container w-full px-4 mx-auto pb-18 md:px-6">
       <h1 className="text-2xl md:text-5xl  pb-6 md:pb-10 font-bold md:mb-6 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent text-center p-3">
         Unsere Leistungen im Überblick
       </h1>

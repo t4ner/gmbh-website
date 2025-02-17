@@ -9,7 +9,7 @@ import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
 import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <ScrollToTopOnMount />
       <Routes>
         <Route path="/" element={<Home />} />

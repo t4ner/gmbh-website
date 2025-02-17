@@ -12,14 +12,14 @@ const DetailServices = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0 }
+    show: { opacity: 1, y: 0 },
   };
 
   useEffect(() => {
@@ -110,7 +110,7 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
   ];
 
   return (
-    <div className="w-full min-h-screen pt-5 overflow-x-hidden md:pt-0 md:py-24">
+    <div className="w-full min-h-screen pt-5 pb-20 overflow-x-hidden md:pt-0 md:py-20">
       <header className="px-4 text-center">
         <h1 className="text-2xl md:text-5xl font-bold pb-6 md:mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
           G&G Fugentechnik GmbH

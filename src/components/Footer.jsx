@@ -204,11 +204,11 @@ const BottomSection = memo(() => {
 
 const Footer = memo(() => (
   <footer
-    className="relative mt-16 bg-gradient-to-b from-white to-[#f8fbfe] border-t-2 border-[#02C5DF]/30"
+    className="relative bg-gradient-to-b from-white to-[#f8fbfe] border-t-2 border-[#02C5DF]/30"
     role="contentinfo"
     aria-label={`${COMPANY_INFO.name} footer area`}
   >
-    <div className="container relative px-4 pt-16 mx-auto">
+    <div className="container relative px-4 mx-auto pt-18">
       <ContactSection />
       <BottomSection />
     </div>
