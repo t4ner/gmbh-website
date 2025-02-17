@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Statistics = ({ title, description, stats }) => {
   return (
@@ -60,11 +61,21 @@ const Statistics = ({ title, description, stats }) => {
         </div>
 
         {/* Statistics Grid */}
-        <div className="relative max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative max-w-6xl mx-auto"
+        >
           <div className="grid grid-cols-1 gap-6 smmd:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-16">
             {stats.map((stat, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ scale: 0.8 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
                 className={`group relative ${
                   index === 1 ? "mt-0 md:mt-12" : ""
                 }`}
@@ -83,10 +94,10 @@ const Statistics = ({ title, description, stats }) => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

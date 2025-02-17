@@ -38,9 +38,7 @@ const ServicesPage = () => {
     <>
       <Navbar />
       <Hero {...heroContent} />
-      <div data-aos="fade-up" data-aos-delay="100">
       <Statistics {...statisticsContent} />
-      </div>
       <DetailServices />
     </>
   );

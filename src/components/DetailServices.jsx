@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const DetailServices = () => {
   const location = useLocation();
@@ -99,20 +100,28 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
 
   return (
     <div className="w-full min-h-screen pt-5 overflow-x-hidden md:pt-0 md:py-24">
-      <header className="px-4 text-center" data-aos="fade-down">
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="px-4 text-center"
+      >
         <h1 className="text-2xl md:text-5xl font-bold pb-6 md:mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
           G&G Fugentechnik GmbH
         </h1>
-      </header>
+      </motion.header>
       <div className="px-4 space-y-8 md:space-y-32 md:px-0">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
             ref={(el) => (serviceRefs.current[index] = el)}
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-once="true"
-            data-aos-delay={index * 100}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.7,
+              delay: index * 0.1,
+            }}
             className="group/item"
           >
             <div
@@ -146,14 +155,14 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
                 </div>
 
                 {/* Modern dekoratif elementler */}
-                <div className="absolute bottom-0 right-0 w-48 h-48 -mb-24 -mr-24 transition-all duration-700 rounded-full md:-mb-48 md:-mr-48 md:w-96 md:h-96 bg-white/10 blur-3 md:group-hover/item:bg-white/15"></div>
+               
 
                 {/* Modern animasyonlu çizgiler */}
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full md:group-hover/item:translate-x-full transition-transform duration-1500 ease-in-out"></div>
                 <div className="absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform translate-x-full md:group-hover/item:-translate-x-full transition-transform duration-1500 ease-in-out"></div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

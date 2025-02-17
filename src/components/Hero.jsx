@@ -1,5 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import Navbar from "./Navbar";
+import { motion } from 'framer-motion';
 
 const Hero = ({
   title,
@@ -58,7 +59,12 @@ const Hero = ({
       </div>
 
       <div className="relative z-10 container mx-auto px-4 h-[calc(100vh-80px)] flex items-center pt-44">
-        <div className="max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl"
+        >
           <h1
             className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl animate-fade-in"
             aria-label={title}
@@ -79,7 +85,7 @@ const Hero = ({
           <p className="mb-8 text-lg text-white md:text-2xl animate-slide-up">
             {subtitle}
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <button

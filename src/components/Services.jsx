@@ -3,6 +3,29 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 100 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 100,
+    },
+  },
+};
+
 const Services = () => {
   const [hasHovered, setHasHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(-1);
@@ -74,20 +97,17 @@ const Services = () => {
         Unsere Leistungen im Überblick
       </h1>
 
-      <div className="space-y-8">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+        className="space-y-8"
+      >
         {services.map((service, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: 0.5,
-                delay: index * 0.1,
-              },
-            }}
-            viewport={{ once: true, margin: "-100px" }}
+            variants={item}
             className="relative service-card"
           >
             <Link
@@ -183,7 +203,7 @@ const Services = () => {
             </Link>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="flex justify-center mt-12 md:mt-16">
         <Link

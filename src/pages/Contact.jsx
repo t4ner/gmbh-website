@@ -49,8 +49,8 @@ const Contact = () => {
       <Hero {...heroContent} />
 
       {/* Stats/Contact Info Section */}
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8 -mt-40 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
+      <div className="relative z-10 px-4 mx-auto -mt-40  sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4 ">
           {[
             {
               icon: <FaMapMarkerAlt className="w-6 h-6" />,
@@ -123,20 +123,20 @@ const Contact = () => {
                       className={`bg-gradient-to-r ${item.color} ${item.hoverColor} p-8 text-white transition-all duration-300 flex-1 flex flex-col justify-between`}
                     >
                       <div className="flex items-center justify-between">
-                        <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm  transition-transform duration-300">
+                        <div className="p-4 transition-transform duration-300 rounded-lg bg-white/20 backdrop-blur-sm">
                           {React.cloneElement(item.icon, {
                             className: "w-8 h-8",
                           })}
                         </div>
-                        <span className="text-4xl font-bold opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-4xl font-bold transition-opacity duration-300 opacity-50 group-hover:opacity-100">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                       </div>
                       <div className="mt-auto">
-                        <h3 className="text-2xl font-semibold mb-4">
+                        <h3 className="mb-4 text-2xl font-semibold">
                           {item.title}
                         </h3>
-                        <p className="text-lg opacity-90 leading-relaxed">
+                        <p className="text-lg leading-relaxed opacity-90">
                           {item.value}
                         </p>
                       </div>
@@ -149,20 +149,20 @@ const Contact = () => {
                     className={`bg-gradient-to-r ${item.color} ${item.hoverColor} p-8 text-white transition-all duration-300 flex-1 flex flex-col justify-between`}
                   >
                     <div className="flex items-center justify-between">
-                      <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm  transition-transform duration-300">
+                      <div className="p-4 transition-transform duration-300 rounded-lg bg-white/20 backdrop-blur-sm">
                         {React.cloneElement(item.icon, {
                           className: "w-8 h-8",
                         })}
                       </div>
-                      <span className="text-4xl font-bold opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-4xl font-bold transition-opacity duration-300 opacity-50 group-hover:opacity-100">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                     </div>
                     <div className="mt-auto">
-                      <h3 className="text-2xl font-semibold mb-4">
+                      <h3 className="mb-4 text-2xl font-semibold">
                         {item.title}
                       </h3>
-                      <p className="text-lg opacity-90 leading-relaxed">
+                      <p className="text-lg leading-relaxed opacity-90">
                         {item.value}
                       </p>
                     </div>
@@ -175,14 +175,16 @@ const Contact = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="container mx-auto pt-24">
+      <div className="container pt-24 mx-auto">
         <ToastContainer />
         <div className="px-4 py-8 mb-20 md:px-6 lg:px-8">
           <div className="mx-auto">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              className="flex flex-col lg:flex-row border border-[#02C5DF] shadow-3xl rounded-xl overflow-hidden bg-white transition-transform  duration-300 ease-in-out"
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col lg:flex-row border border-[#02C5DF] shadow-3xl rounded-xl overflow-hidden bg-white transition-transform duration-300 ease-in-out"
             >
               <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto">
                 <iframe
@@ -237,7 +239,7 @@ const Contact = () => {
                   </div>
                 </form>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

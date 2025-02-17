@@ -39,17 +39,10 @@ const About = () => {
   return (
     <>
       <Navbar />
-
       <Hero {...heroContent} />
-      <div data-aos="fade-up" data-aos-delay="100">
-        <Statistics {...statisticsContent} />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="200">
-        <AboutCompany />
-      </div>
-      <div data-aos="fade-up" data-aos-delay="300">
-        <EmployeeCard />
-      </div>
+      <Statistics {...statisticsContent} />
+      <AboutCompany />
+      <EmployeeCard />
     </>
   );
 };
