@@ -102,7 +102,7 @@ const CompanyInfo = () => {
                 />
               </figure>
               <article className="flex-grow p-4 transition-shadow duration-300 bg-white shadow-xl md:p-6 rounded-3xl hover:shadow-2xl">
-                <h2 className="mb-3 text-lg font-semibold text-gray-800 md:text-xl">
+                <h2 className="mb-3 text-base font-semibold text-gray-800 md:text-xl">
                   Wer sind wir?
                 </h2>
                 <p className="text-sm leading-relaxed text-gray-600 md:text-lg">
@@ -141,7 +141,7 @@ const CompanyInfo = () => {
 
             {/* Quality Box */}
             <article className="flex-grow p-4 transition-all duration-300 bg-white shadow-xl md:p-8 rounded-3xl hover:shadow-2xl">
-              <h2 className="mb-4 text-lg font-semibold text-gray-800 md:text-xl">
+              <h2 className="mb-4 text-base font-semibold text-gray-800 md:text-xl">
                 Qualität als oberste Priorität
               </h2>
               <p className="text-sm leading-relaxed text-gray-600 md:text-lg">
@@ -177,7 +177,7 @@ const CompanyInfo = () => {
                 {service.icon}
               </div>
               <h3
-                className="text-lg md:text-xl font-semibold mb-4 text-gray-800 
+                className="text-base md:text-xl font-semibold mb-4 text-gray-800 
                 transition-all duration-500 ease-in-out group-hover:text-[#008FC8]"
               >
                 {service.title}

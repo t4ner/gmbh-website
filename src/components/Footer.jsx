@@ -137,7 +137,7 @@ const ContactSection = memo(() => {
 
   return (
     <nav
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto mb-16 md:mb-24"
+      className="grid max-w-6xl grid-cols-1 gap-4 mx-auto mb-16 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 md:mb-24"
       aria-label="Contact options"
     >
       {contactButtons}
@@ -165,7 +165,7 @@ const BottomSection = memo(() => {
           <img
             src={Logo}
             alt={`${COMPANY_INFO.name} Logo`}
-            className="w-40 hover:opacity-80 transition-opacity duration-300"
+            className="w-40 transition-opacity duration-300 hover:opacity-80"
             width="160"
             height="160"
             loading="lazy"
@@ -191,7 +191,7 @@ const Footer = memo(() => (
     role="contentinfo"
     aria-label={`${COMPANY_INFO.name} footer area`}
   >
-    <div className="relative container px-4 mx-auto pt-10 md:pt-24 pb-6 md:pb-12">
+    <div className="container relative px-4 pt-10 pb-6 mx-auto md:pt-24 md:pb-12">
       <ContactSection />
       <BottomSection />
     </div>

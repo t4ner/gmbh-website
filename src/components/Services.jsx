@@ -69,8 +69,8 @@ const Services = () => {
   };
 
   return (
-    <div className="w-full container mx-auto pb-24">
-      <h1 className="text-5xl pb-10 font-bold mb-6 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent text-center p-3">
+    <div className="container w-full px-4 mx-auto md:pb-24 md:px-6">
+      <h1 className="text-2xl md:text-5xl  pb-6 md:pb-10 font-bold md:mb-6 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent text-center p-3">
         Unsere Leistungen im Überblick
       </h1>
 
@@ -88,7 +88,7 @@ const Services = () => {
               },
             }}
             viewport={{ once: true, margin: "-100px" }}
-            className="service-card relative"
+            className="relative service-card"
           >
             <Link
               to="/leistungen"
@@ -96,7 +96,7 @@ const Services = () => {
               state={{ selectedService: service.id }}
             >
               <div
-                className={`group relative rounded-xl overflow-visible transition-all duration-300 h-[200px] ${
+                className={`group relative rounded-xl overflow-visible transition-all duration-300 ${
                   (!hasHovered && index === 0) || hoveredIndex === index
                     ? "bg-gradient-to-r from-[#02C5DF] to-[#008FC7]"
                     : "bg-[#D6EFF6]"
@@ -104,10 +104,10 @@ const Services = () => {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                <div className="flex items-center justify-between p-6 relative z-10 h-full">
+                <div className="relative z-10 flex flex-col h-full gap-4 p-4 md:flex-row md:items-center md:p-6">
                   <div className="flex-1 max-w-2xl">
                     <h2
-                      className={`text-xl font-semibold mb-4 ${
+                      className={`text-base md:text-xl font-semibold mb-2 md:mb-4 ${
                         (!hasHovered && index === 0) || hoveredIndex === index
                           ? "text-white"
                           : ""
@@ -116,7 +116,7 @@ const Services = () => {
                       {service.title}
                     </h2>
                     <p
-                      className={`text-lg leading-relaxed ${
+                      className={`text-sm md:text-lg leading-relaxed ${
                         (!hasHovered && index === 0) || hoveredIndex === index
                           ? "text-white/90"
                           : "text-gray-600"
@@ -126,16 +126,16 @@ const Services = () => {
                     </p>
                   </div>
 
-                  <div className="relative">
+                  <div className="flex items-center gap-4">
                     <div
-                      className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                      className={`w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
                         (!hasHovered && index === 0) || hoveredIndex === index
                           ? "border-white bg-[#D6EFF6]"
                           : "border-white bg-gradient-to-r from-[#02C5DF] to-[#008FC7]"
                       }`}
                     >
                       <HiArrowUpRight
-                        className="w-6 h-6"
+                        className="w-5 h-5 md:w-6 md:h-6"
                         color={
                           (!hasHovered && index === 0) || hoveredIndex === index
                             ? "black"
@@ -143,11 +143,21 @@ const Services = () => {
                         }
                       />
                     </div>
+                    <span
+                      className={`lg:hidden text-sm md:text-base ${
+                        (!hasHovered && index === 0) || hoveredIndex === index
+                          ? "text-white"
+                          : "text-gray-600"
+                      }`}
+                    >
+                      Mehr erfahren
+                    </span>
                   </div>
                 </div>
 
+                {/* Büyük ekranlar için resim */}
                 <div
-                  className={`absolute right-[200px] top-1/2 -translate-y-1/2 w-[350px] h-[250px] rotate-12 overflow-hidden rounded-2xl border-8 border-white transition-opacity duration-300 ${
+                  className={`absolute right-[200px] top-1/2 -translate-y-1/2 w-[350px] h-[250px] rotate-12 overflow-hidden rounded-2xl border-8 border-white lg:block hidden transition-opacity duration-300 ${
                     (!hasHovered && index === 0) || hoveredIndex === index
                       ? "opacity-100"
                       : "opacity-0"
@@ -157,7 +167,16 @@ const Services = () => {
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="w-full h-full object-cover scale-110"
+                    className="object-cover w-full h-full scale-110"
+                  />
+                </div>
+
+                {/* Mobil ve tablet için resim */}
+                <div className="lg:hidden w-full h-[200px] overflow-hidden rounded-xl mt-4">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="object-cover w-full h-full"
                   />
                 </div>
               </div>
@@ -166,14 +185,14 @@ const Services = () => {
         ))}
       </div>
 
-      <div className="mt-16 flex justify-center">
+      <div className="flex justify-center mt-12 md:mt-16">
         <Link
           to="/leistungen"
-          className="group flex items-center gap-2 px-8 py-4 text-black border rounded-full text-lg hover:bg-gradient-to-r from-[#02C5DF] to-[#008FC7] hover:text-white transition-all duration-300"
+          className="group text-sm md:text-lg flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 text-black border rounded-full  hover:bg-gradient-to-r from-[#02C5DF] to-[#008FC7] hover:text-white transition-all duration-300"
         >
           Einzelheiten
-          <div className="w-8 h-8 rounded-full bg-[#D6EFF6] flex items-center justify-center">
-            <HiArrowUpRight className="w-4 h-4" color="black" />
+          <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#D6EFF6] flex items-center justify-center">
+            <HiArrowUpRight className="w-3 h-3 md:w-4 md:h-4" color="black" />
           </div>
         </Link>
       </div>
