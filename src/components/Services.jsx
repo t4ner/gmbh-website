@@ -131,7 +131,7 @@ const Services = () => {
                     <h2
                       className={`text-base md:text-xl font-semibold mb-2 md:mb-4 ${
                         (!hasHovered && index === 0) || hoveredIndex === index
-                          ? "text-gray-600 md:text-white"
+                          ? "text-black md:text-white"
                           : ""
                       }`}
                     >
@@ -140,7 +140,7 @@ const Services = () => {
                     <p
                       className={`text-sm md:text-lg leading-relaxed ${
                         (!hasHovered && index === 0) || hoveredIndex === index
-                          ? "md:text-white/90"
+                          ? "text-gray-600 md:text-white/90"
                           : "text-gray-600"
                       }`}
                     >
@@ -152,7 +152,7 @@ const Services = () => {
                     <div
                       className={`w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
                         (!hasHovered && index === 0) || hoveredIndex === index
-                          ? "border-white bg-[#D6EFF6]"
+                          ? "border-white bg-gradient-to-r from-[#02C5DF] to-[#008FC7] md:bg-[#D6EFF6]"
                           : "border-white bg-gradient-to-r from-[#02C5DF] to-[#008FC7]"
                       }`}
                     >
@@ -160,7 +160,7 @@ const Services = () => {
                         className="w-5 h-5 md:w-6 md:h-6"
                         color={
                           (!hasHovered && index === 0) || hoveredIndex === index
-                            ? "black"
+                            ? "white"
                             : "white"
                         }
                       />
@@ -168,8 +168,8 @@ const Services = () => {
                     <span
                       className={`lg:hidden text-sm md:text-base ${
                         (!hasHovered && index === 0) || hoveredIndex === index
-                          ? "text-white"
-                          : "text-gray-600"
+                          ? "md:text-white"
+                          : "md:text-gray-600"
                       }`}
                     >
                       Mehr erfahren
