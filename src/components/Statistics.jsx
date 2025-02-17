@@ -36,49 +36,51 @@ const Statistics = ({ title, description, stats }) => {
               stroke="url(#grad1)"
               strokeWidth="0.5"
               fill="none"
-              className="animate-pulse delay-100"
+              className="delay-100 animate-pulse"
             />
             <path
               d="M0,40 Q25,15 50,40 T100,40"
               stroke="url(#grad1)"
               strokeWidth="0.5"
               fill="none"
-              className="animate-pulse delay-200"
+              className="delay-200 animate-pulse"
             />
           </svg>
         </div>
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-24">
+      <div className="container relative px-4 py-12 mx-auto md:py-24">
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-24">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r pb-2 from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
+        <div className="mx-auto mb-12 text-center md:mb-24">
+          <h2 className="text-2xl md:text-5xl font-bold  md:mb-6 bg-gradient-to-r pb-2 from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
             {title}
           </h2>
-          <p className="text-gray-600 text-lg">{description}</p>
+          <p className="px-4 text-sm text-gray-600 md:text-lg">{description}</p>
         </div>
 
         {/* Statistics Grid */}
         <div className="relative max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+          <div className="grid grid-cols-1 gap-6 smmd:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-16">
             {stats.map((stat, index) => (
               <div
                 key={index}
                 className={`group relative ${
-                  index === 1 ? "mt-8 md:mt-12" : ""
+                  index === 1 ? "mt-0 md:mt-12" : ""
                 }`}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] rounded-2xl opacity-20 group-hover:opacity-30 transform transition-all duration-300 -rotate-6"></div>
-                <div className="relative bg-white rounded-2xl p-8 shadow-xl transform transition-transform duration-300 hover:-translate-y-2">
+                <div className="relative p-6 transition-transform duration-300 transform bg-white shadow-xl rounded-2xl md:p-8 hover:-translate-y-2">
                   <div className="text-center">
-                    <span className="text-6xl font-bold text-[#02C5DF] mb-4 block">
+                    <span className="text-3xl md:text-6xl font-bold text-[#02C5DF] mb-2 md:mb-4 block">
                       {stat.value}
                     </span>
-                    <h3 className="text-xl font-semibold mb-3 text-[#008FC7]">
+                    <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] text-transparent bg-clip-text">
                       {stat.title}
                     </h3>
-                    <p className="text-gray-600">{stat.description}</p>
+                    <p className="text-sm text-gray-600 md:text-base">
+                      {stat.description}
+                    </p>
                   </div>
                 </div>
               </div>
