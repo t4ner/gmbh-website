@@ -120,7 +120,7 @@ const Services = () => {
               <div
                 className={`group relative rounded-xl overflow-visible transition-all duration-300 ${
                   (!hasHovered && index === 0) || hoveredIndex === index
-                    ? "bg-gradient-to-r from-[#02C5DF] to-[#008FC7]"
+                    ? "bg-[#D6EFF6] md:bg-gradient-to-r from-[#02C5DF] to-[#008FC7]"
                     : "bg-[#D6EFF6]"
                 } hover:cursor-pointer`}
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -131,7 +131,7 @@ const Services = () => {
                     <h2
                       className={`text-base md:text-xl font-semibold mb-2 md:mb-4 ${
                         (!hasHovered && index === 0) || hoveredIndex === index
-                          ? "text-white"
+                          ? "text-gray-600 md:text-white"
                           : ""
                       }`}
                     >
@@ -140,7 +140,7 @@ const Services = () => {
                     <p
                       className={`text-sm md:text-lg leading-relaxed ${
                         (!hasHovered && index === 0) || hoveredIndex === index
-                          ? "text-white/90"
+                          ? "md:text-white/90"
                           : "text-gray-600"
                       }`}
                     >
