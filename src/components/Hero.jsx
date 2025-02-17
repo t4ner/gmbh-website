@@ -26,7 +26,7 @@ const Hero = ({
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black to-gray-900"
+      className="relative h-[90vh] overflow-hidden md:min-h-screen bg-gradient-to-b from-black to-gray-900"
       aria-label="Hero Section"
     >
       <Navbar />
