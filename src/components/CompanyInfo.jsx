@@ -101,7 +101,7 @@ const CompanyInfo = () => {
                   decoding="async"
                 />
               </figure>
-              <article className="flex-grow p-6 transition-shadow duration-300 bg-white shadow-xl rounded-3xl hover:shadow-2xl">
+              <article className="flex-grow p-4 transition-shadow duration-300 bg-white shadow-xl md:p-6 rounded-3xl hover:shadow-2xl">
                 <h2 className="mb-3 text-lg font-semibold text-gray-800 md:text-xl">
                   Wer sind wir?
                 </h2>
@@ -140,7 +140,7 @@ const CompanyInfo = () => {
             </div>
 
             {/* Quality Box */}
-            <article className="flex-grow p-8 transition-all duration-300 bg-white shadow-xl rounded-3xl hover:shadow-2xl">
+            <article className="flex-grow p-4 transition-all duration-300 bg-white shadow-xl md:p-8 rounded-3xl hover:shadow-2xl">
               <h2 className="mb-4 text-lg font-semibold text-gray-800 md:text-xl">
                 Qualität als oberste Priorität
               </h2>
@@ -164,7 +164,7 @@ const CompanyInfo = () => {
           {services.map((service, index) => (
             <article
               key={index}
-              className="p-8 transition-shadow bg-white border border-gray-100 shadow-lg rounded-xl hover:shadow-xl duration-800"
+              className="p-4 transition-shadow bg-white border border-gray-100 shadow-lg md:p-8 rounded-xl hover:shadow-xl duration-800"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
