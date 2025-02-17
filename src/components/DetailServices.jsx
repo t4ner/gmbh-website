@@ -71,9 +71,11 @@ Verkehrsflächen`,
     {
       title: "Verarbeitung von 1- und 2-K Fugendichtstoffen",
       description: `Für die zuverlässige Abdichtung von Bewegungs- und Anschlussfugen verwenden wir hochwertige 1- und 2-komponentige Fugendichtstoffe. Diese bieten eine dauerhafte, elastische Versiegelung und schützen vor Feuchtigkeit, Temperaturschwankungen und mechanischen Belastungen. Unsere Anwendungen umfassen:
-● Bewegungsfugen in Beton, Mauerwerk und Kunststein, besonders in LAU-Anlagen.
-● Anschlussfugenabdichtungen für Zargen aus Holz, Glas, Metall oder Kunststoff.
-● Fugensanierungen zur Erneuerung und langfristigen Schadensvermeidung.
+
+1. Bewegungsfugen in Beton, Mauerwerk und Kunststein, besonders in LAU-Anlagen.
+2. Anschlussfugenabdichtungen für Zargen aus Holz, Glas, Metall oder Kunststoff.
+3. Fugensanierungen zur Erneuerung und langfristigen Schadensvermeidung.
+
 Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belastbare Fugenlösungen.`,
       image: "/services/service3.jpg",
       imageAlt: "Havuz Bakımı",
@@ -81,28 +83,52 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
     },
     {
       title: "Rissesanierung im HPS-Verfahren",
-      description: `Die Rissesanierung im Heißpress-Stoßverfahren (HPS-Verfahren) ist eine effektive Methode zur dauerhaften Instandsetzung von Rissen in Asphalt- und Betonflächen. Durch heiß verarbeitete Vergussmasse wird unter Druck eine kraftschlüssige Verbindung hergestellt, die Feuchtigkeit, Tausalze und Schmutz abhält. Vorteile der HPS-Rissesanierung: ✔ Langlebige Abdichtung, ✔ Flexibilität zur Anpassung an Bewegungen, ✔ Effiziente Verarbeitung für minimale Verkehrsbehinderungen, ✔ Verbesserte Verkehrssicherheit. Diese Methode eignet sich besonders für Straßen, Brücken und Parkplätze.`,
+      description: `Die Rissesanierung im Heißpress-Stoßverfahren (HPS-Verfahren) ist eine effektive Methode zur dauerhaften Instandsetzung von Rissen in Asphalt- und Betonflächen. Durch heiß verarbeitete Vergussmasse wird unter Druck eine kraftschlüssige Verbindung hergestellt, die Feuchtigkeit, Tausalze und Schmutz abhält. Vorteile der HPS-Rissesanierung:
+
+1. Langlebige Abdichtung
+2. Flexibilität zur Anpassung an Bewegungen
+3. Effiziente Verarbeitung für minimale Verkehrsbehinderungen
+4. Verbesserte Verkehrssicherheit
+
+Diese Methode eignet sich besonders für Straßen, Brücken und Parkplätze.`,
       image: "/services/service4.jpg",
       imageAlt: "Havuz Bakımı",
       align: "right",
     },
     {
       title: "Heißnaht und Randabdichtung",
-      description: `Die Heißnaht- und Randabdichtung sorgt für die langfristige Versiegelung von Fugen und Schnittkanten in Asphalt- und Betonflächen. Durch heiß verarbeitete Vergussmasse wird eine dauerhafte Verbindung geschaffen, die Feuchtigkeit, Tausalzen und Verkehrsbelastungen standhält. Einsatzbereiche: ✔ Heißnahtabdichtung – Verbindung von Asphalt- und Betonflächen, besonders an Nahtstellen. ✔ Randabdichtung – Schutz freiliegender Kanten vor Wasser und Schmutz. Vorteile: Langlebiger Schutz, hohe Belastbarkeit und optimierte Haltbarkeit. Mit unserer präzisen Ausführung sichern wir die Lebensdauer von Verkehrsflächen.`,
+      description: `Die Heißnaht- und Randabdichtung sorgt für die langfristige Versiegelung von Fugen und Schnittkanten in Asphalt- und Betonflächen. Durch heiß verarbeitete Vergussmasse wird eine dauerhafte Verbindung geschaffen, die Feuchtigkeit, Tausalzen und Verkehrsbelastungen standhält. Einsatzbereiche:
+
+1. Heißnahtabdichtung – Verbindung von Asphalt- und Betonflächen, besonders an Nahtstellen
+2. Randabdichtung – Schutz freiliegender Kanten vor Wasser und Schmutz
+
+Vorteile: Langlebiger Schutz, hohe Belastbarkeit und optimierte Haltbarkeit. Mit unserer präzisen Ausführung sichern wir die Lebensdauer von Verkehrsflächen.`,
       image: "/services/service5.jpeg",
       imageAlt: "Havuz Bakımı",
       align: "left",
     },
     {
       title: "Schienenfugen- und Pflasterverguss",
-      description: `Der Schienenfugen- und Pflasterverguss sorgt für die Abdichtung und Stabilisierung von Fugen in Gleisanlagen, Pflasterflächen und Verkehrswegen. Durch elastische Vergussmassen wird eine sichere Verbindung geschaffen, die vor Feuchtigkeit, Schmutz und Belastung schützt. Einsatzbereiche: ✔ Schienenfugenverguss – schützt vor Wasser, Schmutz, reduziert Schwingungen und Lärm. ✔ Pflasterverguss – sorgt für stabile Pflasterbeläge in Verkehrsflächen und Gehwegen. Vorteile: Langlebige Abdichtung, hohe Elastizität und erhöhte Verkehrssicherheit.`,
+      description: `Der Schienenfugen- und Pflasterverguss sorgt für die Abdichtung und Stabilisierung von Fugen in Gleisanlagen, Pflasterflächen und Verkehrswegen. Durch elastische Vergussmassen wird eine sichere Verbindung geschaffen, die vor Feuchtigkeit, Schmutz und Belastung schützt. Einsatzbereiche:
+
+1. Schienenfugenverguss – schützt vor Wasser, Schmutz, reduziert Schwingungen und Lärm
+2. Pflasterverguss – sorgt für stabile Pflasterbeläge in Verkehrsflächen und Gehwegen
+
+Vorteile: Langlebige Abdichtung, hohe Elastizität und erhöhte Verkehrssicherheit.`,
       image: "/services/service6.jpg",
       imageAlt: "Havuz Bakımı",
       align: "right",
     },
     {
       title: "Verlegung von Induktionsschleifen",
-      description: ` Die fachgerechte Verlegung von Induktionsschleifen ist entscheidend für die Funktion von Verkehrsleitsystemen, Schrankenanlagen, Parkleitsystemen und Ampelanlagen. Durch präzise Fräsarbeiten und den sorgfältigen Einbau gewährleisten wir optimale Signalübertragung und Langlebigkeit. Ablauf: 1. Exakte Fräsung der Schlitze. 2. Einlegen und Fixieren der Schleifen. 3. Verguss zum Schutz vor Witterung und Belastung. 4. Anschluss und Funktionsprüfung. Vorteile: Hohe Signalqualität, Langlebigkeit und präzise Ausführung für effiziente Verkehrssteuerung.`,
+      description: `Die fachgerechte Verlegung von Induktionsschleifen ist entscheidend für die Funktion von Verkehrsleitsystemen, Schrankenanlagen, Parkleitsystemen und Ampelanlagen. Durch präzise Fräsarbeiten und den sorgfältigen Einbau gewährleisten wir optimale Signalübertragung und Langlebigkeit. Ablauf:
+
+1. Exakte Fräsung der Schlitze
+2. Einlegen und Fixieren der Schleifen
+3. Verguss zum Schutz vor Witterung und Belastung
+4. Anschluss und Funktionsprüfung
+
+Vorteile: Hohe Signalqualität, Langlebigkeit und präzise Ausführung für effiziente Verkehrssteuerung.`,
       image: "/services/service7.jpg",
       imageAlt: "Havuz Bakımı",
       align: "left",
@@ -139,7 +165,7 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
                 service.align === "right"
                   ? "md:flex-row-reverse md:rounded-l-[3rem] md:ml-auto"
                   : "md:flex-row md:rounded-r-[3rem] md:mr-auto"
-              } overflow-hidden w-full md:w-[90%] lg:w-[1500px] h-auto md:h-[500px] md:hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transform md:hover:-translate-y-3 transition-all duration-700 ease-out md:group-hover/item:translate-y-0 rounded-2xl md:rounded-none`}
+              } overflow-hidden w-full md:w-[90%] lg:w-[1500px] h-auto md:h-[550px] md:hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transform md:hover:-translate-y-3 transition-all duration-700 ease-out md:group-hover/item:translate-y-0 rounded-2xl md:rounded-none`}
             >
               <div
                 className={`w-full md:w-2/3 relative h-[200px] md:h-[600px] overflow-hidden ${
@@ -159,9 +185,36 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
                   <h2 className="mb-4 text-base font-semibold transition-all duration-500 transform md:mb-8 md:text-3xl md:group-hover/item:translate-x-2">
                     {service.title}
                   </h2>
-                  <p className="text-sm text-gray-100 transition-all duration-500 transform md:text-lg md:group-hover/item:translate-x-2 opacity-90">
-                    {service.description}
+                  <p className="text-sm text-gray-100 md:text-lg ">
+                    {service.description.split("\n\n")[0]}
                   </p>
+
+                  {/* Özellikler Bölümü */}
+                  {service.description.split("\n\n").length > 1 && (
+                    <div>
+                      <ul className="space-y-1 list-disc list-inside">
+                        {service.description
+                          .split("\n\n")
+                          .slice(1, -1)
+                          .join("\n")
+                          .split("\n")
+                          .filter((item) => item.match(/^\d/))
+                          .map((item, idx) => (
+                            <li
+                              key={idx}
+                              className="text-sm text-gray-100 md:text-lg"
+                            >
+                              {item.replace(/^\d+\.\s/, "")}
+                            </li>
+                          ))}
+                      </ul>
+
+                      {/* Son paragraf */}
+                      <p className="text-sm text-gray-100 md:text-lg">
+                        {service.description.split("\n\n").slice(-1)[0]}
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full md:group-hover/item:translate-x-full transition-transform duration-1500 ease-in-out"></div>

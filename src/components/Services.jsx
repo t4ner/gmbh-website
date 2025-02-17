@@ -210,11 +210,14 @@ const Services = () => {
       <div className="flex justify-center mt-10 md:mt-16">
         <Link
           to="/leistungen"
-          className="group text-sm md:text-lg flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 text-black border rounded-full  hover:bg-gradient-to-r from-[#02C5DF] to-[#008FC7] hover:text-white transition-all duration-300"
+          className="group text-sm md:text-lg flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-[#D6EFF6]  rounded-full text-black hover:bg-gradient-to-r hover:from-[#02C5DF] hover:to-[#008FC7] hover:text-white transition-all duration-300"
         >
           Einzelheiten
-          <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#D6EFF6] flex items-center justify-center">
-            <HiArrowUpRight className="w-3 h-3 md:w-4 md:h-4" color="black" />
+          <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-r from-[#02C5DF] to-[#008FC7] group-hover:bg-[#D6EFF6] flex items-center justify-center">
+            <HiArrowUpRight
+              color="white"
+              className="w-3 h-3 text-white group-hover:text-black md:w-4 md:h-4"
+            />
           </div>
         </Link>
       </div>
