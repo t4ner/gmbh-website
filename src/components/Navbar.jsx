@@ -25,22 +25,22 @@ const Navbar = () => {
   return (
     <header className="relative">
       <nav
-        className="absolute top-4 w-full z-50"
+        className="absolute z-50 w-full top-4"
         role="navigation"
         aria-label="Hauptnavigation"
       >
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
+        <div className="container px-4 mx-auto">
+          <div className="flex items-center justify-between">
             {/* Logo */}
             <Link
               to="/"
-              className="text-white font-bold"
+              className="relative z-50 font-bold text-white"
               aria-label="Zur Startseite"
             >
               <img
                 src="/logo/logo.png"
                 alt="Unternehmenslogo"
-                className="h-20 w-auto object-contain"
+                className="object-contain w-auto h-16 md:h-20"
                 width="80"
                 height="80"
                 loading="eager"
@@ -49,7 +49,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="items-center hidden space-x-8 md:flex">
               {navLinks.map((link) => (
                 <Link
                   key={link.text}
@@ -74,7 +74,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-white p-2"
+              className="relative z-50 p-2 md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
@@ -82,7 +82,7 @@ const Navbar = () => {
               <svg
                 className="w-6 h-6"
                 fill="none"
-                stroke="currentColor"
+                stroke={isMobileMenuOpen ? "currentColor" : "white"}
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
@@ -105,31 +105,34 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div
-              className="md:hidden mt-4 bg-black/90 rounded-lg p-4"
+              className="fixed inset-0 z-40 flex items-center justify-center pt-20 bg-white md:hidden"
+              style={{ top: 0 }}
               role="dialog"
               aria-modal="true"
               aria-label="Mobile Navigation"
             >
-              {navLinks.map((link) => (
+              <div className="flex flex-col items-center p-4 space-y-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.text}
+                    to={link.to}
+                    className="text-black tracking-wider text-xl font-semibold hover:text-[#02C5DF] transition-colors"
+                    aria-label={link.label}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.text}
+                  </Link>
+                ))}
                 <Link
-                  key={link.text}
-                  to={link.to}
-                  className="block text-white hover:text-[#02C5DF] py-2 transition-colors"
-                  aria-label={link.label}
+                  to="/kontakt"
+                  className=" px-8 py-3 tracking-wider bg-gradient-to-r from-[#02C5DF] to-[#008FC7] text-white rounded-full text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  role="button"
+                  aria-label="Kontakt aufnehmen"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {link.text}
+                  KONTAKT
                 </Link>
-              ))}
-              <Link
-                to="/kontakt"
-                className="block text-center mt-4 px-6 py-2 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] text-white rounded-full font-semibold hover:scale-105 transition-all duration-300"
-                role="button"
-                aria-label="Kontakt aufnehmen"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                KONTAKT
-              </Link>
+              </div>
             </div>
           )}
         </div>

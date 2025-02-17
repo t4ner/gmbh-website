@@ -1,7 +1,5 @@
 import React, { useEffect, useCallback } from "react";
 import Navbar from "./Navbar";
-// Resmi import etmek yerine public klasöründen kullanacağız
-// import herohome from "/hero/home-hero.jpg";
 
 const Hero = ({
   title,
@@ -9,7 +7,7 @@ const Hero = ({
   backgroundImage = "/hero/home-hero.jpg",
   imageAlt,
 }) => {
-  // useCallback ile scroll handler'ı optimize ediyoruz
+
   const handleScroll = useCallback(() => {
     const scrolled = window.scrollY;
     const parallaxElements = document.querySelectorAll(".parallax");
@@ -17,31 +15,28 @@ const Hero = ({
     parallaxElements.forEach((element) => {
       const speed = element.dataset.speed || 0.5;
       const yPos = scrolled * speed;
-      // Transform yerine translate3d kullanarak GPU hızlandırması
       element.style.transform = `translate3d(0, ${yPos}px, 0)`;
     });
   }, []);
 
   useEffect(() => {
-    // Performans için passive event listener kullanıyoruz
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
   return (
     <section
-      className="min-h-screen bg-gradient-to-b from-black to-gray-900 relative overflow-hidden"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black to-gray-900"
       aria-label="Hero Section"
     >
       <Navbar />
 
-      {/* Arka plan optimizasyonu */}
-      <div className="absolute inset-0 h-screen w-screen z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent z-10" />
+      <div className="absolute inset-0 z-0 w-screen h-screen">
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
         <img
           src={backgroundImage}
           alt={imageAlt}
-          className="w-full h-full object-cover scale-105 parallax"
+          className="object-cover w-full h-full scale-105 parallax"
           data-speed="0.2"
           loading="eager"
           fetchPriority="high"
@@ -51,7 +46,6 @@ const Hero = ({
         />
       </div>
 
-      {/* Animasyonlu şekiller - will-change özelliği eklendi */}
       <div className="absolute inset-0 z-5">
         <div
           className="absolute top-20 left-10 w-32 h-32 bg-[#02C5DF]/10 rounded-full blur-3xl animate-pulse"
@@ -63,11 +57,10 @@ const Hero = ({
         ></div>
       </div>
 
-      {/* Hero içeriği - Semantic HTML ve ARIA etiketleri eklendi */}
       <div className="relative z-10 container mx-auto px-4 h-[calc(100vh-80px)] flex items-center pt-44">
         <div className="max-w-4xl">
           <h1
-            className="text-6xl font-bold text-white mb-6 leading-tight animate-fade-in"
+            className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl animate-fade-in"
             aria-label={title}
           >
             {title.split("\n").map((line, i) => (
@@ -83,21 +76,20 @@ const Hero = ({
               </React.Fragment>
             ))}
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8 animate-slide-up">
+          <p className="mb-8 text-lg text-white md:text-2xl animate-slide-up">
             {subtitle}
           </p>
         </div>
       </div>
 
-      {/* Scroll indicator - Erişilebilirlik iyileştirmesi */}
       <button
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 hover:scale-110 transition-transform duration-300"
+        className="absolute z-10 transition-transform duration-300 transform -translate-x-1/2 bottom-8 left-1/2 hover:scale-110"
         onClick={() =>
           window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
         }
         aria-label="Nach unten scrollen"
       >
-        <div className="w-8 h-14 border-2 border-white rounded-full flex items-start justify-center p-2">
+        <div className="flex items-start justify-center w-8 p-2 border-2 border-white rounded-full h-14">
           <div className="w-1 h-3 bg-white rounded-full animate-scroll-bounce"></div>
         </div>
       </button>
