@@ -98,13 +98,13 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
   ];
 
   return (
-    <div className="w-full min-h-screen py-24 overflow-x-hidden">
-      <header className="text-center" data-aos="fade-down">
-        <h1 className="text-5xl font-bold pb-6 mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
+    <div className="w-full min-h-screen pt-5 overflow-x-hidden md:pt-0 md:py-24">
+      <header className="px-4 text-center" data-aos="fade-down">
+        <h1 className="text-2xl md:text-5xl font-bold pb-6 md:mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
           G&G Fugentechnik GmbH
         </h1>
       </header>
-      <div className="space-y-32">
+      <div className="px-4 space-y-8 md:space-y-32 md:px-0">
         {services.map((service, index) => (
           <div
             key={index}
@@ -118,40 +118,39 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
             <div
               className={`flex flex-col group ${
                 service.align === "right"
-                  ? "md:flex-row-reverse rounded-l-[3rem] ml-auto"
-                  : "md:flex-row rounded-r-[3rem] mr-auto"
-              } overflow-hidden w-[1500px] h-[500px] hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transform hover:-translate-y-3 transition-all duration-700 ease-out group-hover/item:translate-y-0`}
+                  ? "md:flex-row-reverse md:rounded-l-[3rem] md:ml-auto"
+                  : "md:flex-row md:rounded-r-[3rem] md:mr-auto"
+              } overflow-hidden w-full md:w-[90%] lg:w-[1500px] h-auto md:h-[500px] md:hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transform md:hover:-translate-y-3 transition-all duration-700 ease-out md:group-hover/item:translate-y-0 rounded-2xl md:rounded-none`}
             >
               <div
-                className={`w-full md:w-2/3 relative h-[600px] overflow-hidden ${
-                  service.align === "right" ? "border-l-8" : "border-r-8"
+                className={`w-full md:w-2/3 relative h-[200px] md:h-[600px] overflow-hidden ${
+                  service.align === "right" ? "md:border-l-8" : "md:border-r-8"
                 } border-white`}
               >
                 <img
                   src={service.image}
                   alt={service.imageAlt}
-                  className="w-full h-full object-cover transform transition-all duration-1000 group-hover/item:scale-105"
+                  className="object-cover w-full h-full transition-all duration-1000 transform md:group-hover/item:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-75 transition-all duration-700"></div>
+                <div className="absolute inset-0 transition-all duration-700 opacity-0 bg-gradient-to-br from-black/50 via-transparent to-transparent md:group-hover/item:opacity-75"></div>
               </div>
-              <div className="w-full md:w-3/4 bg-gradient-to-br from-[#02C5DF] to-[#008FC7] text-white p-12 flex flex-col justify-center relative overflow-hidden backdrop-blur-sm group-hover/item:from-[#008FC7] group-hover/item:to-[#02C5DF] transition-all duration-700">
+              <div className="w-full md:w-3/4 bg-gradient-to-br from-[#02C5DF] to-[#008FC7] text-white p-4 md:p-12 flex flex-col justify-center relative overflow-hidden backdrop-blur-sm md:group-hover/item:from-[#008FC7] md:group-hover/item:to-[#02C5DF] transition-all duration-700">
                 <div className="relative z-10">
-                  <span className="block w-24 h-0.5 bg-white/60 mb-8 transform origin-left scale-x-0 transition-all duration-700 group-hover/item:scale-x-100"></span>
-                  <h2 className="text-3xl font-semibold mb-8 transform transition-all duration-500 group-hover/item:translate-x-2">
+                  <span className="block w-24 h-0.5 bg-white/60 mb-4 md:mb-8 transform origin-left scale-x-0 transition-all duration-700 md:group-hover/item:scale-x-100"></span>
+                  <h2 className="mb-4 text-base font-semibold transition-all duration-500 transform md:mb-8 md:text-3xl md:group-hover/item:translate-x-2">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-gray-100 transform transition-all duration-500 group-hover/item:translate-x-2 opacity-90">
+                  <p className="text-sm text-gray-100 transition-all duration-500 transform md:text-lg md:group-hover/item:translate-x-2 opacity-90">
                     {service.description}
                   </p>
                 </div>
 
                 {/* Modern dekoratif elementler */}
-                <div className="absolute right-0 bottom-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mb-48 blur-3xl group-hover/item:bg-white/15 transition-all duration-700"></div>
-                <div className="absolute left-0 top-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mt-24 blur-2xl group-hover/item:bg-white/15 transition-all duration-700"></div>
+                <div className="absolute bottom-0 right-0 w-48 h-48 -mb-24 -mr-24 transition-all duration-700 rounded-full md:-mb-48 md:-mr-48 md:w-96 md:h-96 bg-white/10 blur-3 md:group-hover/item:bg-white/15"></div>
 
                 {/* Modern animasyonlu çizgiler */}
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full group-hover/item:translate-x-full transition-transform duration-1500 ease-in-out"></div>
-                <div className="absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform translate-x-full group-hover/item:-translate-x-full transition-transform duration-1500 ease-in-out"></div>
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full md:group-hover/item:translate-x-full transition-transform duration-1500 ease-in-out"></div>
+                <div className="absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform translate-x-full md:group-hover/item:-translate-x-full transition-transform duration-1500 ease-in-out"></div>
               </div>
             </div>
           </div>
