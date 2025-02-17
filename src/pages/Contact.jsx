@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ContactInfo from "../components/ContactInfo";
 
 const Contact = () => {
   const form = useRef();
@@ -44,140 +45,19 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full min-h-scree0">
+    <div className="w-full min-h-screen">
       {/* Hero Section with 3D Effect */}
       <Hero {...heroContent} />
 
       {/* Stats/Contact Info Section */}
-      <div className="relative z-10 px-4 mx-auto -mt-40  sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-4 ">
-          {[
-            {
-              icon: <FaMapMarkerAlt className="w-6 h-6" />,
-              title: "Adresse",
-              value: (
-                <>
-                  G&G Fugentechnik GmbH
-                  <br />
-                  Südendstraße 7/1,
-                  <br />
-                  76709 Kronau
-                </>
-              ),
-              link: "https://maps.app.goo.gl/GsX4i2fXnqiB54ys5",
-              color: "from-[#7BE4F0] to-[#02C5DF]",
-              hoverColor: "hover:from-[#6ad3de] hover:to-[#02b3cc]",
-            },
-            {
-              icon: <FaPhone className="w-6 h-6" />,
-              title: "Telefon",
-              value: "+49 (0)7253 5091 340",
-              link: "tel:+4972535091340",
-              color: "from-[#02C5DF] to-[#02A7C7]",
-              hoverColor: "hover:from-[#02b3cc] hover:to-[#0295b2]",
-            },
-            {
-              icon: <FaEnvelope className="w-6 h-6" />,
-              title: "E-Mail",
-              value: "info@gundg-fugentechnik.de",
-              link: "mailto:info@gundg-fugentechnik.de",
-              color: "from-[#02A7C7] to-[#008FC7]",
-              hoverColor: "hover:from-[#0295b2] hover:to-[#007eb3]",
-            },
-            {
-              icon: <FaClock className="w-6 h-6" />,
-              title: "Bürozeiten",
-              value: (
-                <>
-                  Montag bis Freitag: 8:00 - 16:30 Uhr
-                  <br />
-                  Samstag, Sonntag und an Feiertagen: geschlossen
-                  <br />
-                  <span className="text-sm italic">
-                    Oder nach vorheriger Terminvereinbarung
-                  </span>
-                </>
-              ),
-              color: "from-[#008FC7] to-[#0076AB]",
-              hoverColor: "hover:from-[#007eb3] hover:to-[#006796]",
-            },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              {item.link ? (
-                <a
-                  href={item.link}
-                  target={item.link.startsWith("http") ? "_blank" : "_self"}
-                  rel={
-                    item.link.startsWith("http") ? "noopener noreferrer" : ""
-                  }
-                  className="block cursor-pointer"
-                >
-                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl h-[380px] flex flex-col">
-                    <div
-                      className={`bg-gradient-to-r ${item.color} ${item.hoverColor} p-8 text-white transition-all duration-300 flex-1 flex flex-col justify-between`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="p-4 transition-transform duration-300 rounded-lg bg-white/20 backdrop-blur-sm">
-                          {React.cloneElement(item.icon, {
-                            className: "w-8 h-8",
-                          })}
-                        </div>
-                        <span className="text-4xl font-bold transition-opacity duration-300 opacity-50 group-hover:opacity-100">
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                      </div>
-                      <div className="mt-auto">
-                        <h3 className="mb-4 text-2xl font-semibold">
-                          {item.title}
-                        </h3>
-                        <p className="text-lg leading-relaxed opacity-90">
-                          {item.value}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              ) : (
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300  hover:shadow-2xl h-[380px] flex flex-col">
-                  <div
-                    className={`bg-gradient-to-r ${item.color} ${item.hoverColor} p-8 text-white transition-all duration-300 flex-1 flex flex-col justify-between`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="p-4 transition-transform duration-300 rounded-lg bg-white/20 backdrop-blur-sm">
-                        {React.cloneElement(item.icon, {
-                          className: "w-8 h-8",
-                        })}
-                      </div>
-                      <span className="text-4xl font-bold transition-opacity duration-300 opacity-50 group-hover:opacity-100">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <div className="mt-auto">
-                      <h3 className="mb-4 text-2xl font-semibold">
-                        {item.title}
-                      </h3>
-                      <p className="text-lg leading-relaxed opacity-90">
-                        {item.value}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </div>
+      <div className="relative z-10 mx-auto -mt-24 md:-mt-40 md:px-8">
+        <ContactInfo />
       </div>
 
       {/* Contact Form Section */}
-      <div className="container pt-24 mx-auto">
+      <div className="container pt-12 pb-2 mx-auto md:pb-0 md:pt-24">
         <ToastContainer />
-        <div className="px-4 py-8 mb-20 md:px-6 lg:px-8">
+        <div className="px-4 md:mb-20 md:px-6 lg:px-8">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 50 }}

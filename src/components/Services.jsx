@@ -14,14 +14,12 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 100 },
+  hidden: { opacity: 0, y: 50 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 100,
+      duration: 0.5,
     },
   },
 };
@@ -101,13 +99,17 @@ const Services = () => {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true }}
         className="space-y-8"
       >
         {services.map((service, index) => (
           <motion.div
             key={index}
             variants={item}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
             className="relative service-card"
           >
             <Link
@@ -205,7 +207,7 @@ const Services = () => {
         ))}
       </motion.div>
 
-      <div className="flex justify-center mt-12 md:mt-16">
+      <div className="flex justify-center mt-10 md:mt-16">
         <Link
           to="/leistungen"
           className="group text-sm md:text-lg flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 text-black border rounded-full  hover:bg-gradient-to-r from-[#02C5DF] to-[#008FC7] hover:text-white transition-all duration-300"

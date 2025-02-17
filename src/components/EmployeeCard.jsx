@@ -29,7 +29,7 @@ const employeeData = [
 
 const EmployeeCard = () => {
   return (
-    <div className="container grid grid-cols-1 gap-8 p-4 pb-24 mx-auto md:grid-cols-3 px-7">
+    <div className="container grid grid-cols-1 gap-8 p-4 px-4 mx-auto md:pb-24 md:grid-cols-3 md:px-7">
       {employeeData.map((employee, index) => (
         <motion.div
           key={index}
@@ -37,13 +37,13 @@ const EmployeeCard = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
-          className="bg-[#D6EFF6] rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+          className="bg-[#D6EFF6] rounded-2xl shadow-lg p-4 md:p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
         >
           <div className="mb-6 text-center">
-            <h3 className="mb-2 text-xl font-semibold text-gray-800">
+            <h3 className="mb-2 text-base font-semibold text-gray-800 md:text-xl">
               {employee.name}
             </h3>
-            <p className="font-medium tracking-wide text-cyan-600">
+            <p className="text-sm font-medium tracking-wide text-cyan-600 md:text-base">
               {employee.position}
             </p>
           </div>
@@ -54,8 +54,8 @@ const EmployeeCard = () => {
                 <IoCall className="text-xl text-cyan-600" />
               </div>
               <div className="ml-4">
-                <p className="text-sm text-gray-500">Telefon</p>
-                <p className="text-gray-700 ">{employee.phone}</p>
+                <p className="text-xs text-gray-500 md:text-sm ">Telefon</p>
+                <p className="text-sm text-gray-700 md:text-base">{employee.phone}</p>
               </div>
             </div>
 
@@ -64,8 +64,8 @@ const EmployeeCard = () => {
                 <BsPhone className="text-xl text-cyan-600" />
               </div>
               <div className="ml-4">
-                <p className="text-sm text-gray-500">Mobil</p>
-                <p className="text-gray-700">{employee.mobile}</p>
+                <p className="text-xs text-gray-500 md:text-sm ">Mobil</p>
+                <p className="text-sm text-gray-700 md:text-base">{employee.mobile}</p>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ const EmployeeCard = () => {
                   onClick={() =>
                     (window.location.href = `mailto:${employee.email}`)
                   }
-                  className="font-medium transition-colors text-cyan-600 hover:text-cyan-700"
+                  className="text-sm transition-colors md:font-medium md:text-base text-cyan-600 hover:text-cyan-700"
                 >
                   E-Mail schreiben
                 </button>

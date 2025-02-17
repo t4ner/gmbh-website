@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Statistics = ({ title, description, stats }) => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         {/* Dekoratif SVG Desenler */}

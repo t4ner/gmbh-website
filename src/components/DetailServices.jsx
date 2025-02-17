@@ -5,15 +5,26 @@ import { motion } from "framer-motion";
 const DetailServices = () => {
   const location = useLocation();
   const selectedServiceId = location.state?.selectedService;
-
-  // Her servis için bir ref oluşturun
   const serviceRefs = useRef({});
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0 }
+  };
+
   useEffect(() => {
-    // ID'den 1 çıkararak doğru index'e ulaşıyoruz
     const index = selectedServiceId - 1;
     if (selectedServiceId && serviceRefs.current[index]) {
-      // Sayfa yüklendiğinde scroll yapabilmek için küçük bir gecikme ekliyoruz
       setTimeout(() => {
         serviceRefs.current[index].scrollIntoView({
           behavior: "smooth",
@@ -100,28 +111,27 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
 
   return (
     <div className="w-full min-h-screen pt-5 overflow-x-hidden md:pt-0 md:py-24">
-      <motion.header
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="px-4 text-center"
-      >
+      <header className="px-4 text-center">
         <h1 className="text-2xl md:text-5xl font-bold pb-6 md:mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent">
           G&G Fugentechnik GmbH
         </h1>
-      </motion.header>
-      <div className="px-4 space-y-8 md:space-y-32 md:px-0">
+      </header>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="px-4 space-y-8 md:space-y-32 md:px-0"
+      >
         {services.map((service, index) => (
           <motion.div
             key={index}
             ref={(el) => (serviceRefs.current[index] = el)}
+            variants={item}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.7,
-              delay: index * 0.1,
-            }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
             className="group/item"
           >
             <div
@@ -154,17 +164,13 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
                   </p>
                 </div>
 
-                {/* Modern dekoratif elementler */}
-               
-
-                {/* Modern animasyonlu çizgiler */}
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform -translate-x-full md:group-hover/item:translate-x-full transition-transform duration-1500 ease-in-out"></div>
                 <div className="absolute bottom-0 right-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent transform translate-x-full md:group-hover/item:-translate-x-full transition-transform duration-1500 ease-in-out"></div>
               </div>
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
