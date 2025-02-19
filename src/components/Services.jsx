@@ -34,21 +34,21 @@ const Services = () => {
       title: "Fugenherstellung nach ZTV Fug-StB",
       description:
         "Wir führen Fugenarbeiten gemäß ZTV Fug-StB fachgerecht und präzise aus. Dank unserer sorgfältigen Arbeitsweise gewährleisten wir eine langlebige Abdichtung, die zuverlässig vor Feuchtigkeit, Temperaturschwankungen und daraus resultierenden Schäden schützt",
-      img: "/services/service1.webp",
+      img: "/services/service1.jpeg",
     },
     {
       id: 2,
       title: "Trennschnitte in Beton und Asphalt",
       description:
         "Wir führen präzise Trennschnitte in Beton und Asphalt aus. Unsere fachgerechte Arbeitsweise sorgt für saubere Schnittkanten und minimiert Spannungsrisse, um die Langlebigkeit und Stabilität der Bauwerke zu gewährleisten",
-      img: "/services/service2.jpg",
+      img: "/services/service2.jpeg",
     },
     {
       id: 3,
       title: "Verarbeitung von 1- und 2-K Fugendichtstoffen",
       description:
         "Wir verarbeiten hochwertige 1- und 2-komponentige Fugendichtstoffe fachgerecht und präzise. Unsere professionelle Anwendung sorgt für eine dauerhafte, elastische Abdichtung, die optimalen Schutz vor Feuchtigkeit, Temperaturschwankungen und mechanischer Belastung bietet",
-      img: "/services/service3.jpg",
+      img: "/services/service3.jpeg",
     },
     {
       id: 4,
@@ -69,14 +69,14 @@ const Services = () => {
       title: "Schienenfugen- und Pflasterverguss",
       description:
         "Wir führen Schienenfugen- und Pflasterverguss fachgerecht und präzise aus. Diese Verfahren gewährleisten eine dauerhafte Abdichtung, schützen vor Feuchtigkeit und verhindern Schäden durch Temperaturschwankungen sowie mechanische Belastungen",
-      img: "/services/service6.jpg",
+      img: "/services/service6.jpeg",
     },
     {
       id: 7,
       title: "Verlegung von Induktionsschleifen",
       description:
         "Wir verlegen Induktionsschleifen präzise und fachgerecht. Diese ermöglichen eine zuverlässige Signalübertragung für Verkehrssteuerungssysteme, Schrankenanlagen und Parkleitsysteme und sorgen für eine effiziente und langlebige Funktion",
-      img: "/services/service7.jpg",
+      img: "/services/service7.jpeg",
     },
   ];
 

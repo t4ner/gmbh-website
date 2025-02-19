@@ -48,14 +48,13 @@ Gussasphalt, Walz- und Betonbelägen.
 Dank der elastischen Eigenschaften der Fugen werden auftretende
 Bewegungen optimal aufgenommen. Dadurch wird das Eindringen von
 Feuchtigkeit und Tausa`,
-      image: "/services/service1.webp",
+      image: "/services/service1.jpeg",
       imageAlt: "Lüks Havuz",
       align: "left",
     },
     {
       title: "Trennschnitte in Beton und Asphalt",
-      description: `Wir führen präzise Trennschnitte in Asphalt und Beton bis zu einer Tiefe von 40
-cm aus. Dank moderner Schneidtechnik erzielen wir saubere Schnittkanten,
+      description: `Wir führen präzise Trennschnitte in Asphalt und Beton bis zu einer Tiefe von 50-60 cm aus. Dank moderner Schneidtechnik erzielen wir saubere Schnittkanten,
 minimieren Spannungsrisse und gewährleisten eine materialschonende
 Bearbeitung.
 Auf Wunsch übernehmen wir auch die fachgerechte Vormarkierung des
@@ -64,7 +63,7 @@ Umsetzung sicherzustellen. Unsere präzise Arbeitsweise sorgt für eine
 optimale Vorbereitung von Baumaßnahmen, wie dem Einbau von
 Dehnungsfugen, Induktionsschleifen oder Sanierungsarbeiten an Straßen und
 Verkehrsflächen`,
-      image: "/services/service2.jpg",
+      image: "/services/service2.jpeg",
       imageAlt: "Havuz Bakımı",
       align: "right",
     },
@@ -77,7 +76,7 @@ Verkehrsflächen`,
 3. Fugensanierungen zur Erneuerung und langfristigen Schadensvermeidung.
 
 Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belastbare Fugenlösungen.`,
-      image: "/services/service3.jpg",
+      image: "/services/service3.jpeg",
       imageAlt: "Havuz Bakımı",
       align: "left",
     },
@@ -115,7 +114,7 @@ Vorteile: Langlebiger Schutz, hohe Belastbarkeit und optimierte Haltbarkeit. Mit
 2. Pflasterverguss – sorgt für stabile Pflasterbeläge in Verkehrsflächen und Gehwegen
 
 Vorteile: Langlebige Abdichtung, hohe Elastizität und erhöhte Verkehrssicherheit.`,
-      image: "/services/service6.jpg",
+      image: "/services/service6.jpeg",
       imageAlt: "Havuz Bakımı",
       align: "right",
     },
@@ -129,7 +128,7 @@ Vorteile: Langlebige Abdichtung, hohe Elastizität und erhöhte Verkehrssicherhe
 4. Anschluss und Funktionsprüfung
 
 Vorteile: Hohe Signalqualität, Langlebigkeit und präzise Ausführung für effiziente Verkehrssteuerung.`,
-      image: "/services/service7.jpg",
+      image: "/services/service7.jpeg",
       imageAlt: "Havuz Bakımı",
       align: "left",
     },
