@@ -22,7 +22,7 @@ const ServicesPage = () => {
         description: "Expertise in der Branche",
       },
       {
-        value: "100+",
+        value: "10000+",
         title: "Abgeschlossene Projekte",
         description: "Erfolgreiche Fugenarbeiten",
       },
