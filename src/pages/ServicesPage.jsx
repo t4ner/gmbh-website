@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Statistics from "../components/Statistics";
 import DetailServices from "../components/DetailServices";
-
+import Sertificas from "../components/Sertificas";
 const ServicesPage = () => {
   const heroContent = {
     title: "Leistungen der \nG&G Fugentechnik GmbH",
@@ -40,6 +40,7 @@ const ServicesPage = () => {
       <Hero {...heroContent} />
       <Statistics {...statisticsContent} />
       <DetailServices />
+      <Sertificas />
     </>
   );
 };

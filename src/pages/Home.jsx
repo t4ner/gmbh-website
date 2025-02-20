@@ -7,7 +7,7 @@ const Home = () => {
   const heroContent = {
     title: "Willkommen bei\nG&G Fugentechnik GmbH",
     subtitle: `Ihr Partner für Fugen-, Trennschnitt- und Rissesanierungstechnik 
-               Fachbetrieb nach WHG EQ2960129`,
+              Fachbetrieb nach WHG gemäß §62 AwSV`,
     backgroundImage: "/hero/home-hero.jpeg",
     imageAlt: "G&G Fugentechnik GmbH Firmengebäude und Dienstleistungen",
   };
