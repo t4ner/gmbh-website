@@ -6,7 +6,7 @@ import styles from "./Sertificas.module.css";
 
 const Sertificas = () => {
   const settings = {
-    dots: true,
+    dots: window.innerWidth > 640,
     infinite: true,
     speed: 800,
     slidesToShow: 3,
@@ -21,31 +21,35 @@ const Sertificas = () => {
         breakpoint: 1536,
         settings: {
           slidesToShow: 3,
+          dots: true,
         },
       },
       {
         breakpoint: 1280,
         settings: {
           slidesToShow: 2,
+          dots: true,
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          dots: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          dots: true,
         },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          dots: false,
+          dots: true,
         },
       },
     ],
@@ -91,14 +95,14 @@ const Sertificas = () => {
 
   return (
     <div className="container pb-24 mx-auto md:pt-10">
-      <h1 className="text-2xl md:text-5xl font-bold pb-6 md:mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent text-center">
+      <h1 className="text-2xl md:text-5xl font-bold p-6 md:mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent text-center">
         Unsere Zertifikate
       </h1>
       <div className={`w-full ${styles.sliderContainer}`}>
         <Slider {...settings}>
           {certificates.map((certificate) => (
             <div key={certificate.id} className="p-2 sm:p-4 md:p-6">
-              <div className="p-2 sm:p-4 transition-all duration-500 transform bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl hover:shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:-translate-y-2">
+              <div className="p-2 sm:p-4 transition-all duration-500 transform bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-2xl hover:shadow-[0_8px_30px_rgba(0,0,0,0.25)] ">
                 <div className="overflow-hidden rounded-xl ring-1 ring-black/5">
                   <img
                     src={certificate.image}
