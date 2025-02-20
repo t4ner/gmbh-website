@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 // Statik değerler ve meta bilgiler
 const COMPANY_INFO = {
   name: "Gundg Fugentechnik",
-  phone: "+49 (0)7253 5091 339",
+  phone: "+49 (0)7253 5091 338",
   email: "info@gundg-fugentechnik.de",
   location: "https://maps.app.goo.gl/dd2NNC7Wit4ag6248",
 };

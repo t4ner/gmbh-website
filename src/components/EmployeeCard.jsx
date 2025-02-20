@@ -7,7 +7,7 @@ const employeeData = [
   {
     name: "Michelle Weindel",
     position: "Einkauf/Buchhaltung",
-    phone: "+49 (0)7253 5091-338",
+    phone: "+49 (0)7253 9894 822",
     email: "michelle.weindel@gundg-fugentechnik.de",
     image: "/employee/employee1.jpeg",
   },

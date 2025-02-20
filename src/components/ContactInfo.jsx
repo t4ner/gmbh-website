@@ -24,13 +24,13 @@ const ContactInfo = () => {
       title: "Kontakt",
       value: (
         <>
-          Tel: +49 (0)7253 5091 340
+          Tel: +49 (0)7253 5091 338
           <br />
           E-Mail: info@gundg-fugentechnik.de
         </>
       ),
       links: {
-        phone: "tel:+4972535091340",
+        phone: "tel:+49 (0)7253 5091 338",
         email: "mailto:info@gundg-fugentechnik.de",
       },
       color: "from-[#02C5DF] to-[#02A7C7]",
@@ -81,7 +81,7 @@ const ContactInfo = () => {
             {item.links ? (
               <div className="text-sm leading-relaxed md:text-lg opacity-90">
                 <a href={item.links.phone} className="block hover:underline">
-                  Tel: +49 (0)7253 5091 340
+                  Tel: +49 (0)7253 5091 338
                 </a>
                 <a href={item.links.email} className="block hover:underline">
                   E-Mail: info@gundg-fugentechnik.de

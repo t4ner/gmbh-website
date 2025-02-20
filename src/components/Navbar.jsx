@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Mobile menü açıldığında scroll'u engelleyelim
   useEffect(() => {
@@ -22,6 +23,21 @@ const Navbar = () => {
     { to: "/uber-uns", text: "ÜBER UNS", label: "Über uns" },
   ];
 
+  // Stil kontrolü için yardımcı fonksiyon
+  const getLinkStyle = () => {
+    if (
+      location.pathname === "/impressum" ||
+      location.pathname === "/datenschutzerklarung"
+    ) {
+      return "tracking-wider text-[#02C5DF] font-medium hover:text-[#008FC7] transition-colors";
+    }
+    return "tracking-wider text-white font-medium hover:text-[#02C5DF] transition-colors";
+  };
+
+  const isLegalPage =
+    location.pathname === "/impressum" ||
+    location.pathname === "/datenschutzerklarung";
+
   return (
     <header className="relative">
       <nav
@@ -34,7 +50,9 @@ const Navbar = () => {
             {/* Logo */}
             <Link
               to="/"
-              className="relative z-50 font-bold text-white"
+              className={`relative z-50 font-bold ${
+                isLegalPage ? "text-black" : "text-white"
+              }`}
               aria-label="Zur Startseite"
             >
               <img
@@ -54,7 +72,7 @@ const Navbar = () => {
                 <Link
                   key={link.text}
                   to={link.to}
-                  className="tracking-wider text-white font-medium hover:text-[#02C5DF] transition-colors"
+                  className={getLinkStyle()}
                   aria-label={link.label}
                 >
                   {link.text}
@@ -82,7 +100,13 @@ const Navbar = () => {
               <svg
                 className="w-6 h-6"
                 fill="none"
-                stroke={isMobileMenuOpen ? "currentColor" : "white"}
+                stroke={
+                  isMobileMenuOpen
+                    ? "currentColor"
+                    : isLegalPage
+                    ? "#000"
+                    : "white"
+                }
                 viewBox="0 0 24 24"
                 width="24"
                 height="24"
@@ -116,7 +140,12 @@ const Navbar = () => {
                   <Link
                     key={link.text}
                     to={link.to}
-                    className="text-black tracking-wider text-xl font-semibold hover:text-[#02C5DF] transition-colors"
+                    className={
+                      location.pathname === "/impressum" ||
+                      location.pathname === "/datens"
+                        ? "text-[#02C5DF] tracking-wider text-xl font-semibold hover:text-[#008FC7] transition-colors"
+                        : "text-black tracking-wider text-xl font-semibold hover:text-[#02C5DF] transition-colors"
+                    }
                     aria-label={link.label}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
