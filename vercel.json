@@ -1,0 +1,17 @@
+{
+  "routes": [
+    { "src": "/uber-uns", "dest": "/uber-uns", "status": 200 },
+    { "src": "/kontakt", "dest": "/kontakt", "status": 200 },
+    { "src": "/leistungen", "dest": "/leistungen", "status": 200 },
+    { "src": "/impressum", "dest": "/impressum", "status": 200 },
+    {
+      "src": "/datenschutzerklarung",
+      "dest": "/datenschutzerklarung",
+      "status": 200
+    },
+    { "src": "/[^.]+", "dest": "/", "status": 200 },
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
