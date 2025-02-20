@@ -15,7 +15,7 @@ const Datens = () => {
             1. Allgemeine Hinweise
           </h2>
           <p className="mb-4 text-sm md:text-base">
-            Die G&G Fugentechnik GmbH (nachfolgend "wir" oder "uns") nimmt den
+            Die G&G Fugentechnik GmbH (nachfolgend „wir“ oder „uns“) nimmt den
             Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre
             personenbezogenen Daten vertraulich und entsprechend der
             gesetzlichen Datenschutzvorschriften sowie dieser
@@ -45,9 +45,8 @@ const Datens = () => {
               <p className="text-sm md:text-base">
                 <span className="font-semibold">USt-IdNr.:</span> DE298681135
               </p>
-              <p className="text-sm md:text-base">
-                <span className="font-semibold">Amtsgericht Mannheim HRB</span>{" "}
-                721024
+              <p className="text-sm font-semibold md:text-base">
+              Amtsgericht Mannheim HRB 721024
               </p>
             </div>
           </div>

@@ -11,7 +11,7 @@ const Impressum = () => {
         </h1>
 
         <section className="mb-4">
-          <h2 className="mb-4 text-xl font-semibold">Angaben gemäß § 5 TMG:</h2>
+          <h2 className="mb-4 font-semibold md:text-xl">Angaben gemäß § 5 TMG:</h2>
           <h3 className="mb-2 text-base font-semibold md:text-xl">
             Herausgeber:
           </h3>
@@ -109,7 +109,7 @@ const Impressum = () => {
         </section>
 
         <section className="mb-4">
-          <h2 className="mb-4 text-xl font-semibold">
+          <h2 className="mb-4 font-semibold md:text-xl">
             Haftungsausschluss (Disclaimer)
           </h2>
 
