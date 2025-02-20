@@ -94,7 +94,7 @@ const Sertificas = () => {
   ];
 
   return (
-    <div className="container pb-24 mx-auto md:pt-10">
+    <div className="container pb-24 mx-auto -mt-10 md:pt-10">
       <h1 className="text-2xl md:text-5xl font-bold p-6 md:mb-10 bg-gradient-to-r from-[#02C5DF] to-[#008FC7] bg-clip-text text-transparent text-center">
         Unsere Zertifikate
       </h1>
