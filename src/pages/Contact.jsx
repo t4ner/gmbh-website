@@ -40,7 +40,7 @@ const Contact = () => {
   const heroContent = {
     title: "Kontakt zur \nG&G Fugentechnik GmbH",
     subtitle: "Fragen zu unseren Leistungen? Kontaktieren Sie uns!",
-    backgroundImage: "/hero/contact-hero.jpg",
+    backgroundImage: "/hero/contact-hero.webp",
     imageAlt: "G&G Fugentechnik Team und Unternehmen",
   };
 

@@ -34,49 +34,49 @@ const Services = () => {
       title: "Fugenherstellung nach ZTV Fug-StB",
       description:
         "Wir führen Fugenarbeiten gemäß ZTV Fug-StB fachgerecht und präzise aus. Dank unserer sorgfältigen Arbeitsweise gewährleisten wir eine langlebige Abdichtung, die zuverlässig vor Feuchtigkeit, Temperaturschwankungen und daraus resultierenden Schäden schützt",
-      img: "/services/service1.jpeg",
+      img: "/services/service1.webp",
     },
     {
       id: 2,
       title: "Trennschnitte in Beton und Asphalt",
       description:
         "Wir führen präzise Trennschnitte in Beton und Asphalt aus. Unsere fachgerechte Arbeitsweise sorgt für saubere Schnittkanten und minimiert Spannungsrisse, um die Langlebigkeit und Stabilität der Bauwerke zu gewährleisten",
-      img: "/services/service2.jpeg",
+      img: "/services/service2.webp",
     },
     {
       id: 3,
       title: "Verarbeitung von 1- und 2-K Fugendichtstoffen",
       description:
         "Wir verarbeiten hochwertige 1- und 2-komponentige Fugendichtstoffe fachgerecht und präzise. Unsere professionelle Anwendung sorgt für eine dauerhafte, elastische Abdichtung, die optimalen Schutz vor Feuchtigkeit, Temperaturschwankungen und mechanischer Belastung bietet",
-      img: "/services/service3.jpeg",
+      img: "/services/service3.webp",
     },
     {
       id: 4,
       title: "Rissesanierung im HPS-Verfahren",
       description:
         "Wir führen Rissesanierungen im HPS-Verfahren fachgerecht und effizient durch. Diese Methode sorgt für eine nachhaltige Versiegelung von Rissen, verhindert das Eindringen von Feuchtigkeit und trägt zur langfristigen Erhaltung der Bausubstanz bei.",
-      img: "/services/service4.jpg",
+      img: "/services/service4.webp",
     },
     {
       id: 5,
       title: "Heißnaht- und Randabdichtung",
       description:
         "Wir bieten professionelle Heißnaht- und Randabdichtungen an. Diese Verfahren sorgen für eine sichere, langlebige Versiegelung, schützen vor Feuchtigkeitseintritt und erhöhen die Widerstandsfähigkeit von Bauwerken gegen Witterungseinflüsse und mechanische Belastungen.",
-      img: "/services/service5.jpeg",
+      img: "/services/service5.webp",
     },
     {
       id: 6,
       title: "Schienenfugen- und Pflasterverguss",
       description:
         "Wir führen Schienenfugen- und Pflasterverguss fachgerecht und präzise aus. Diese Verfahren gewährleisten eine dauerhafte Abdichtung, schützen vor Feuchtigkeit und verhindern Schäden durch Temperaturschwankungen sowie mechanische Belastungen",
-      img: "/services/service6.jpeg",
+      img: "/services/service6.webp",
     },
     {
       id: 7,
       title: "Verlegung von Induktionsschleifen",
       description:
         "Wir verlegen Induktionsschleifen präzise und fachgerecht. Diese ermöglichen eine zuverlässige Signalübertragung für Verkehrssteuerungssysteme, Schrankenanlagen und Parkleitsysteme und sorgen für eine effiziente und langlebige Funktion",
-      img: "/services/service7.jpeg",
+      img: "/services/service7.webp",
     },
   ];
 

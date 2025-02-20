@@ -48,7 +48,7 @@ Gussasphalt, Walz- und Betonbelägen.
 Dank der elastischen Eigenschaften der Fugen werden auftretende
 Bewegungen optimal aufgenommen. Dadurch wird das Eindringen von
 Feuchtigkeit und Tausa`,
-      image: "/services/service1.jpeg",
+      image: "/services/service1.webp",
       imageAlt: "Lüks Havuz",
       align: "left",
     },
@@ -63,7 +63,7 @@ Umsetzung sicherzustellen. Unsere präzise Arbeitsweise sorgt für eine
 optimale Vorbereitung von Baumaßnahmen, wie dem Einbau von
 Dehnungsfugen, Induktionsschleifen oder Sanierungsarbeiten an Straßen und
 Verkehrsflächen`,
-      image: "/services/service2.jpeg",
+      image: "/services/service2.webp",
       imageAlt: "Havuz Bakımı",
       align: "right",
     },
@@ -76,7 +76,7 @@ Verkehrsflächen`,
 3. Fugensanierungen zur Erneuerung und langfristigen Schadensvermeidung.
 
 Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belastbare Fugenlösungen.`,
-      image: "/services/service3.jpeg",
+      image: "/services/service3.webp",
       imageAlt: "Havuz Bakımı",
       align: "left",
     },
@@ -90,7 +90,7 @@ Mit unserer fachgerechten Verarbeitung gewährleisten wir beständige und belast
 4. Verbesserte Verkehrssicherheit
 
 Diese Methode eignet sich besonders für Straßen, Brücken und Parkplätze.`,
-      image: "/services/service4.jpg",
+      image: "/services/service4.webp",
       imageAlt: "Havuz Bakımı",
       align: "right",
     },
@@ -102,7 +102,7 @@ Diese Methode eignet sich besonders für Straßen, Brücken und Parkplätze.`,
 2. Randabdichtung – Schutz freiliegender Kanten vor Wasser und Schmutz
 
 Vorteile: Langlebiger Schutz, hohe Belastbarkeit und optimierte Haltbarkeit. Mit unserer präzisen Ausführung sichern wir die Lebensdauer von Verkehrsflächen.`,
-      image: "/services/service5.jpeg",
+      image: "/services/service5.webp",
       imageAlt: "Havuz Bakımı",
       align: "left",
     },
@@ -114,7 +114,7 @@ Vorteile: Langlebiger Schutz, hohe Belastbarkeit und optimierte Haltbarkeit. Mit
 2. Pflasterverguss – sorgt für stabile Pflasterbeläge in Verkehrsflächen und Gehwegen
 
 Vorteile: Langlebige Abdichtung, hohe Elastizität und erhöhte Verkehrssicherheit.`,
-      image: "/services/service6.jpeg",
+      image: "/services/service6.webp",
       imageAlt: "Havuz Bakımı",
       align: "right",
     },
@@ -128,7 +128,7 @@ Vorteile: Langlebige Abdichtung, hohe Elastizität und erhöhte Verkehrssicherhe
 4. Anschluss und Funktionsprüfung
 
 Vorteile: Hohe Signalqualität, Langlebigkeit und präzise Ausführung für effiziente Verkehrssteuerung.`,
-      image: "/services/service7.jpeg",
+      image: "/services/service7.webp",
       imageAlt: "Havuz Bakımı",
       align: "left",
     },

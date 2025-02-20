@@ -1,5 +1,5 @@
 import React, { memo, useMemo } from "react";
-import Logo from "/logo/logo.png";
+import Logo from "/logo/logo.webp";
 import {
   FaPhone,
   FaEnvelope,

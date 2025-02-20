@@ -58,37 +58,37 @@ const Sertificas = () => {
   const certificates = [
     {
       id: 1,
-      image: "/sertifica/sertifica1-1.jpg",
+      image: "/sertifica/sertifica1-1.webp",
       alt: "Sertifika 1",
     },
     {
       id: 2,
-      image: "/sertifica/sertifica1-2.jpg",
+      image: "/sertifica/sertifica1-2.webp",
       alt: "Sertifika 2",
     },
     {
       id: 3,
-      image: "/sertifica/sertifica2.jpg",
+      image: "/sertifica/sertifica2.webp",
       alt: "Sertifika 3",
     },
     {
       id: 4,
-      image: "/sertifica/sertifica3.jpg",
+      image: "/sertifica/sertifica3.webp",
       alt: "Sertifika 4",
     },
     {
       id: 5,
-      image: "/sertifica/sertifica4.jpg",
+      image: "/sertifica/sertifica4.webp",
       alt: "Sertifika 5",
     },
     {
       id: 6,
-      image: "/sertifica/sertifica5.jpg",
+      image: "/sertifica/sertifica5.webp",
       alt: "Sertifika 6",
     },
     {
       id: 7,
-      image: "/sertifica/sertifica6.jpg",
+      image: "/sertifica/sertifica6.webp",
       alt: "Sertifika 7",
     },
   ];

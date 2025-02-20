@@ -1,14 +1,13 @@
 import React, { useEffect, useCallback } from "react";
 import Navbar from "./Navbar";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Hero = ({
   title,
   subtitle,
-  backgroundImage = "/hero/home-hero.jpg",
+  backgroundImage = "/hero/home-hero.webp",
   imageAlt,
 }) => {
-
   const handleScroll = useCallback(() => {
     const scrolled = window.scrollY;
     const parallaxElements = document.querySelectorAll(".parallax");

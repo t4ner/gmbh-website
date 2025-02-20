@@ -56,7 +56,7 @@ const Navbar = () => {
               aria-label="Zur Startseite"
             >
               <img
-                src="/logo/logo.png"
+                src="/logo/logo.webp"
                 alt="Unternehmenslogo"
                 className="object-contain w-auto h-16 md:h-20"
                 width="80"

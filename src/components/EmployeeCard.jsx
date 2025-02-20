@@ -9,7 +9,7 @@ const employeeData = [
     position: "Einkauf/Buchhaltung",
     phone: "+49 (0)7253 9894 822",
     email: "michelle.weindel@gundg-fugentechnik.de",
-    image: "/employee/employee1.jpeg",
+    image: "/employee/employee1.webp",
   },
   {
     name: "Tanju Gök",
@@ -17,14 +17,14 @@ const employeeData = [
     phone: "+49 (0)7253 5091 339",
     mobile: "+49 (0)176 2105 2120",
     email: "info@gundg-fugentechnik.de",
-    image: "/employee/employee2.jpeg",
+    image: "/employee/employee2.webp",
   },
   {
     name: "Burcu Yilmaz",
     position: "Einkauf/Personalabteilung/Assistentin der Geschäftsleitung",
     phone: "+49 (0)7253 5091 338",
     email: "burcu.yilmaz@gundg-fugentechnik.de",
-    image: "/employee/employee3.jpeg",
+    image: "/employee/employee3.webp",
   },
 ];
 

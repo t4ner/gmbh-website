@@ -112,7 +112,7 @@ const CompanyInfo = () => {
               <div className="flex flex-col items-start gap-6 md:flex-row">
                 <figure className="flex-shrink-0 w-24 h-24 p-6 overflow-hidden border border-white rounded-full shadow-xl md:h-32 md:w-32">
                   <img
-                    src="logo/logo2.png"
+                    src="logo/logo2.webp"
                     alt="G&G Fugentechnik Recycling Prozess"
                     className="object-cover w-full h-full"
                     loading="lazy"
@@ -134,11 +134,11 @@ const CompanyInfo = () => {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   {
-                    src: "/information/info3.jpg",
+                    src: "/information/info3.webp",
                     alt: "Professionelle Werkzeuge für Fugentechnik",
                   },
                   {
-                    src: "/information/info2.jpg",
+                    src: "/information/info2.webp",
                     alt: "Nachhaltige Baupraktiken bei G&G Fugentechnik",
                   },
                 ].map((img, index) => (
