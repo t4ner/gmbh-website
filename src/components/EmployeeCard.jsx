@@ -16,7 +16,7 @@ const employeeData = [
     position: "Betriebsleitung",
     phone: "+49 (0)7253 5091 339",
     mobile: "+49 (0)176 2105 2120",
-    email: "info@gundg-fugentechnik.de",
+    email: "tanju.goek@gundg-fugentechnik.de",
     image: "/employee/employee2.webp",
   },
   {

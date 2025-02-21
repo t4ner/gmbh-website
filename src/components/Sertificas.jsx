@@ -91,6 +91,12 @@ const Sertificas = () => {
       image: "/sertifica/sertifica6.webp",
       alt: "Sertifika 7",
     },
+    {
+      id: 8,
+      image: "/sertifica/sertifica7.webp",
+      alt: "Sertifika 8",
+    },
+  
   ];
 
   return (
