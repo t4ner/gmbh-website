@@ -9,9 +9,11 @@ import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
 import ScrollToTop from "./components/ScrollToTop";
 import Impressum from "./pages/Impressum";
 import Datens from "./pages/Datens";
+import { Analytics } from "@vercel/analytics/react";
 const App = () => {
   return (
     <div className="overflow-x-hidden">
+      <Analytics />
       <ScrollToTopOnMount />
       <Routes>
         <Route path="/" element={<Home />} />
